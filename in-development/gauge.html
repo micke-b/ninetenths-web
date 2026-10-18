@@ -94,7 +94,7 @@
   </div>
 
   <div class="panel">
-    <h1>GR GAUGE — display mock</h1>
+    <h1>NINE TENTHS GAUGE — display mock</h1>
 
     <div class="group">
       <span class="lbl">Page <span class="hint">(click display / swipe / ← →, 2 clicks = settings)</span></span>
@@ -1267,8 +1267,9 @@ function drawTakeover(w, now) {
  *              ring up and back like a tach's needle sweep, with an afterglow
  *              trail, while the gear, speed and shift ladder count with
  *              it (page 1's layout: the tach).
- * 4. TITLE     GR GAUGE decodes: each cell scrambles through 14-segment
- *              characters and locks left to right with a flash, then a glint.
+ * 4. TITLE     NINE TENTHS GAUGE decodes (two lines): each cell scrambles
+ *              through 14-segment characters and locks left to right with a
+ *              flash, then a glint.
  * 5. HANDOFF   the title fades and the live screen fades in; the ring ghost
  *              never moves, so it reads as one continuous instrument.
  * Only things the firmware's rasterizer does: dots, ring segments in any
@@ -1449,46 +1450,64 @@ function drawSweep(t) {
 }
 
 /* ---- 4. title ---- */
-const TITLE = "GR GAUGE", TITLE_GHOST = "~~!~~~~~", TITLE_SIZE = 46, TITLE_Y = 252;
-const SCRAMBLE = "0123456789ABCDEFGHJKLMNPRSTUVXYZ";
-const CELL_START_MS = 40, CELL_LOCK_MS = 140, CELL_STEP_MS = 75, SCRAMBLE_MS = 45;
+/* NINE TENTHS GAUGE on two lines, both sizes the firmware has: the brand
+ * small on top, GAUGE big under it. The lock wave sweeps left to right across
+ * both lines by each cell's x, over the same 7 cell steps "GR GAUGE" took.
+ * The small line scrambles through its own letters only (the firmware's
+ * glyph cache has no room for every character at 30 px). */
+const TITLE_LINES = [
+  { text: "NINE TENTHS", ghost: "~~~~!~~~~~~", scramble: "EHINST", size: 30, y: 197 },
+  { text: "GAUGE",       ghost: "~~~~~",       scramble: "0123456789ABCDEFGHJKLMNPRSTUVXYZ", size: 46, y: 258 },
+];
+const CELL_START_MS = 40, CELL_LOCK_MS = 140, CELL_STEP_MS = 75, LOCK_STEPS = 7, SCRAMBLE_MS = 45;
 const GLINT_AT = 780, GLINT_MS = 320, GLINT_HALF = 28;
+function titleLayout() {           // per line: font, cell width, left x
+  return TITLE_LINES.map(l => {
+    ctx.font = `700 ${l.size}px DSEG14`;
+    const cw = ctx.measureText(l.ghost).width / l.text.length;
+    return { ...l, font: ctx.font, cw, x0: C - cw * l.text.length / 2 };
+  });
+}
 function drawTitle(t, withRing = true) {
   if (withRing) bootRing(() => false);
-  ctx.font = `700 ${TITLE_SIZE}px DSEG14`;
   ctx.textBaseline = "alphabetic"; ctx.textAlign = "left";
-  const cw = ctx.measureText(TITLE_GHOST).width / TITLE.length, x0 = C - cw * TITLE.length / 2;
-  ctx.fillStyle = mix("#000", T().ghost, clamp01(t / 150)); ctx.fillText(TITLE_GHOST, x0, TITLE_Y);
+  const lines = titleLayout();
+  const xmin = Math.min(...lines.map(l => l.x0)), xmax = Math.max(...lines.map(l => l.x0 + l.cw * l.text.length));
   const scr = mix(T().ghost, T().accent, 0.85);
-  for (let i = 0; i < TITLE.length; i++) {
-    if (TITLE[i] === " ") continue;
-    const start = CELL_START_MS * i, lock = CELL_LOCK_MS + CELL_STEP_MS * i, x = x0 + i * cw;
-    if (t < start) continue;
-    if (t < lock) {                       // scrambling
-      ctx.fillStyle = scr;
-      ctx.fillText(SCRAMBLE[hash(i * 97 + Math.floor(t / SCRAMBLE_MS)) % SCRAMBLE.length], x, TITLE_Y);
-      continue;
+  lines.forEach((l, n) => {
+    ctx.font = l.font;
+    ctx.fillStyle = mix("#000", T().ghost, clamp01(t / 150)); ctx.fillText(l.ghost, l.x0, l.y);
+    for (let i = 0; i < l.text.length; i++) {
+      if (l.text[i] === " ") continue;
+      const x = l.x0 + i * l.cw, k = LOCK_STEPS * (x + l.cw / 2 - xmin) / (xmax - xmin);
+      const start = CELL_START_MS * k, lock = CELL_LOCK_MS + CELL_STEP_MS * k;
+      if (t < start) continue;
+      if (t < lock) {                     // scrambling
+        ctx.fillStyle = scr;
+        ctx.fillText(l.scramble[hash(n * 31 + i * 97 + Math.floor(t / SCRAMBLE_MS)) % l.scramble.length], x, l.y);
+        continue;
+      }
+      const fl = clamp01(1 - (t - lock) / 160);
+      if (fl > 0) {                       // lock flash: a soft halo
+        ctx.fillStyle = mix("#000", T().accent, 0.45 * fl);
+        ctx.fillText(l.text[i], x - 1.5, l.y); ctx.fillText(l.text[i], x + 1.5, l.y);
+      }
+      ctx.fillStyle = mix(T().hero, "#fff", 0.6 * fl);   // toward white, not to it: retro stays one hue
+      ctx.fillText(l.text[i], x, l.y);
     }
-    const fl = clamp01(1 - (t - lock) / 160);
-    if (fl > 0) {                         // lock flash: a soft halo
-      ctx.fillStyle = mix("#000", T().accent, 0.45 * fl);
-      ctx.fillText(TITLE[i], x - 1.5, TITLE_Y); ctx.fillText(TITLE[i], x + 1.5, TITLE_Y);
-    }
-    ctx.fillStyle = mix(T().hero, "#fff", 0.6 * fl);   // toward white, not to it: retro stays one hue
-    ctx.fillText(TITLE[i], x, TITLE_Y);
-  }
+  });
   const gu = (t - GLINT_AT) / GLINT_MS;
-  if (gu > 0 && gu < 1) {                 // the glint: white text in a band sweeping across
-    const xc = x0 - GLINT_HALF + (cw * TITLE.length + 2 * GLINT_HALF) * easeInOut(gu);
+  if (gu > 0 && gu < 1) {                 // the glint: white text in a band sweeping across both lines
+    const xc = xmin - GLINT_HALF + (xmax - xmin + 2 * GLINT_HALF) * easeInOut(gu);
     for (const [hw, a] of [[GLINT_HALF, 0.25], [GLINT_HALF * 0.6, 0.3], [GLINT_HALF * 0.25, 0.45]]) {
       ctx.save();
       ctx.beginPath(); ctx.rect(xc - hw, 0, 2 * hw, W); ctx.clip();
       ctx.fillStyle = mix(T().hero, "#fff", 0.6); ctx.globalAlpha *= a;
-      ctx.fillText(TITLE.replace(" ", "!"), x0, TITLE_Y);
+      for (const l of lines) { ctx.font = l.font; ctx.fillText(l.text.replace(" ", "!"), l.x0, l.y); }
       ctx.restore();
     }
   }
-  label("V0.1  MOCK", C, 296, 20, { color: mix("#000", T().faint, clamp01((t - 700) / 300)) });
+  label("V0.2", C, 300, 20, { color: mix("#000", T().faint, clamp01((t - 700) / 300)) });
 }
 
 function drawBoot(t) {

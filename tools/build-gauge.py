@@ -31,7 +31,13 @@ logo = "brand/nine-tenths_primary_for-dark-bg.png"
 mock = mock.replace(f'logo.src = "{logo}";', f'logo.src = "{data_uri(mock_dir / logo, "image/png")}";')
 if 'url("fonts/' in mock or logo in mock:
     sys.exit("the mock loads a file this script doesn't inline: update the script")
-mock = mock.replace("<title>GR Gauge mock</title>", '<title>Gauge</title>\n<meta name="robots" content="noindex">')
+mock = re.sub(r"<title>[^<]*</title>", '<title>Gauge</title>\n<meta name="robots" content="noindex">', mock, count=1)
+# the boot title shows the firmware's version, not the mock's "V0.1  MOCK"
+boot_c = (mock_dir.parent / "gauge/main/ui/screen_boot.c").read_text()
+version = re.search(r'label\("(V[0-9.]+)"', boot_c)
+if not version or 'label("V0.1  MOCK"' not in mock:
+    sys.exit("can't find the version label in screen_boot.c or the mock: update the script")
+mock = mock.replace('label("V0.1  MOCK"', f'label("{version.group(1)}"')
 if mock.count("</body>") != 1:
     sys.exit("expected one </body> in the mock")
 mock = mock.replace("</body>", (site / "tools/gauge-embed.html").read_text() + "\n</body>")
