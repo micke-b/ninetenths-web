@@ -1919,6 +1919,8 @@ requestAnimationFrame(frame);
     if (e.origin !== location.origin || !m || m.grg !== 1) return;
     if (typeof m.run === "string" && Object.hasOwn(RUN, m.run)) { reset(); RUN[m.run](); }
     if (Number.isInteger(m.page)) setPage(m.page);
+    if (m.nav === "next" || m.nav === "prev") { settings = null; setPage(page + (m.nav === "next" ? 1 : -1)); }
+    if (m.nav === "settings" && !settings) openSettings(performance.now());
     if (typeof m.units === "string") {
       const i = UNIT_SETS.findIndex(u => u.name === m.units);
       if (i >= 0) setUnits(i);

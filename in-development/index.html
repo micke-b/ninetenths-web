@@ -3,21 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>In development: the GR Yaris gauge · Nine Tenths Engineering</title>
-<meta name="description" content="A round AMOLED gauge for the Toyota GR Yaris, in development at Nine Tenths Engineering. Plugs into the OBD port and shows boost, temperatures, tires and warnings at a glance.">
+<title>Nine Tenths Gauge for the GR Yaris · In development · Nine Tenths Engineering</title>
+<meta name="description" content="Nine Tenths Gauge: a round AMOLED gauge for the Toyota GR Yaris, in development at Nine Tenths Engineering. Plugs into the OBD port and shows boost, temperatures, tires and warnings at a glance.">
 <meta name="theme-color" content="#0F1113">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="In development: the GR Yaris gauge">
+<meta property="og:title" content="Nine Tenths Gauge for the GR Yaris">
 <meta property="og:description" content="A round AMOLED gauge for the Toyota GR Yaris. Plug it in, it already knows the car.">
 <meta property="og:image" content="https://ninetenths.se/assets/img/og.png">
 <meta property="og:url" content="https://ninetenths.se/in-development/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="../assets/fonts/archivo-expanded-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/styles.css">
-<link rel="stylesheet" href="../assets/in-development.css">
+<link rel="stylesheet" href="../assets/styles.css?v=2">
+<link rel="stylesheet" href="../assets/in-development.css?v=2">
+<script>document.documentElement.classList.add("js")</script>
 </head>
 <body class="dev">
 
@@ -30,15 +31,23 @@
       <a href="../#about" class="nav-more">About</a>
       <a href="https://trackdayshop.se" rel="noopener">Shop</a>
       <a href="../#contact" class="top__cta">Contact</a>
+      <button class="top__menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
     </nav>
   </div>
+  <nav class="menu" id="menu" aria-label="Menu" hidden>
+    <a href="../#work">Work</a>
+    <a href="./" aria-current="page">In development</a>
+    <a href="../#about">About</a>
+    <a href="https://trackdayshop.se" rel="noopener">Shop <span aria-hidden="true">↗</span></a>
+    <a href="../#contact">Contact</a>
+  </nav>
 </header>
 
 <main>
   <div class="wrap split">
     <aside class="rig" aria-label="Live gauge">
       <div class="rig__inner">
-        <div class="gauge-frame"><iframe id="gauge" src="gauge.html" title="The gauge, running on a simulated GR Yaris"></iframe></div>
+        <div class="gauge-frame"><iframe id="gauge" src="gauge.html" title="Nine Tenths Gauge, running on a simulated GR Yaris"></iframe></div>
         <div class="rig__bar">
           <span class="live small-caps">Live: the gauge's own UI</span>
           <div class="units" role="group" aria-label="Units">
@@ -47,6 +56,7 @@
             <button id="u-uk" type="button" data-units="UK" aria-pressed="false">UK</button>
           </div>
         </div>
+        <div class="rig__restart"><button id="restart" type="button"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/><path d="M12.6 1.6v3.2H9.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>Restart gauge</button><span class="hint">Start-up animation, then the drive.</span></div>
         <div class="chips" role="group" aria-label="Drive the simulated car">
           <button id="run-drive" type="button" data-run="drive" data-page="1" data-tone="go" aria-pressed="true"><i></i>On track</button>
           <button id="run-cold" type="button" data-run="cold" data-page="0" data-tone="caution" aria-pressed="false"><i></i>Cold start</button>
@@ -61,13 +71,13 @@
           <button id="run-mute" type="button" data-run="mute" data-page="3" aria-pressed="false"><i></i>ECU silent</button>
         </div>
         <p class="note" id="note" aria-live="polite"></p>
-        <p class="hint">Tap the gauge to change page; two quick taps open settings. A simulated car drives it, with the same logic as the firmware.</p>
+        <p class="hint">Tap the gauge to change page; two quick taps open settings (see the <a href="#manual">user manual</a>). A simulated car drives it, with the same logic as the firmware.</p>
       </div>
     </aside>
 
     <div class="copy">
       <section class="hero-dev" data-page="0">
-        <span class="status-pill small-caps">In development</span>
+        <div class="namebar"><span class="status-pill small-caps">In development</span><p class="product">Nine Tenths Gauge <span>for the Toyota GR Yaris</span></p></div>
         <h1 class="lean">Read the GR Yaris <em>at a glance.</em></h1>
         <p class="lede">A round 1.75-inch AMOLED gauge that plugs into the OBD port and shows boost, temperatures, tires and warnings on true black, redrawn more than 90 times a second. There is nothing to set up: it already knows the car.</p>
         <div class="fitment" aria-label="Fits">
@@ -97,6 +107,39 @@
         </div>
       </section>
 
+      <section id="manual" data-page="0">
+        <p class="label">User manual</p>
+        <h2 class="lean">One finger, no buttons</h2>
+        <p class="muted">Everything is a tap or a swipe anywhere on the glass, so there is never a button to find while driving. Try each one on the live gauge.</p>
+        <div class="manual">
+          <div class="m-row">
+            <svg class="m-ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="6" fill="currentColor"/><circle cx="24" cy="24" r="13" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".45"/></svg>
+            <div class="m-t"><b>Tap</b><span>Next page. The gauge starts on the page you left it on.</span></div>
+            <button id="try-tap" type="button" data-nav="next">Try</button>
+          </div>
+          <div class="m-row">
+            <svg class="m-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 24h32M15 17l-7 7 7 7M33 17l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <div class="m-t"><b>Swipe left or right</b><span>Next or previous page.</span></div>
+            <button id="try-swipe" type="button" data-nav="prev">Try</button>
+          </div>
+          <div class="m-row">
+            <svg class="m-ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="24" r="5.5" fill="currentColor"/><circle cx="31" cy="24" r="5.5" fill="currentColor"/><circle cx="24.5" cy="24" r="15" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".45"/></svg>
+            <div class="m-t"><b>Double tap</b><span>Settings: brightness and burn-in protection; swipe for the hot tire targets, then the units. Tap the − and + bars to change a value and DONE to leave. Settings close by themselves after 15 seconds.</span></div>
+            <button id="try-double" type="button" data-nav="settings">Try</button>
+          </div>
+          <div class="m-row">
+            <svg class="m-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8 42 39H6Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 19v10M24 32.5v3" stroke="currentColor" stroke-width="2.5"/></svg>
+            <div class="m-t"><b>Tap a warning</b><span>A warning takes over the screen. A tap acknowledges it; it stays as a red tag at the bottom until the value recovers.</span></div>
+            <button id="try-warn" type="button" data-run="oiltemp" data-page="3">Try</button>
+          </div>
+          <div class="m-row">
+            <svg class="m-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 14a14 14 0 1 0 16 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 8v15" stroke="currentColor" stroke-width="2"/></svg>
+            <div class="m-t"><b>Start and stop</b><span>The gauge wakes with the car and switches off when the car goes to sleep. Tap during the start-up animation to skip it.</span></div>
+            <button id="try-restart" type="button" data-restart="1">Try</button>
+          </div>
+        </div>
+      </section>
+
       <section id="setup" data-page="0">
         <p class="label">Set up by GR Yaris drivers</p>
         <h2 class="lean">Our setup, not your homework</h2>
@@ -114,15 +157,20 @@
         </div>
 
         <div class="warmup" aria-labelledby="warm-h">
-          <canvas id="dial" width="500" height="500" role="img" aria-label="Tach with the shift point for the chosen oil temperature"></canvas>
+          <canvas id="dial" width="500" height="500" role="img" aria-label="Tach sweeping up to the shift point for the chosen oil temperature"></canvas>
           <div class="ctl">
             <h3 id="warm-h">The shift light warms up with the oil</h3>
-            <p class="muted">Like a warm-up tach: cold oil means an earlier shift, rising in 250 rpm steps until READY.</p>
-            <label class="small-caps" for="oil">Oil temperature</label>
-            <input id="oil" type="range" min="20" max="100" step="1" value="45">
+            <p class="muted">Like a warm-up tach: with cold oil the redline starts earlier, and it moves up in 250 rpm steps until the oil is READY at 85 °C. Pick an oil temperature.</p>
+            <div class="temps" role="group" aria-label="Oil temperature">
+              <button id="oil-20" type="button" data-oil="20" aria-pressed="false">20 °C</button>
+              <button id="oil-50" type="button" data-oil="50" aria-pressed="true">50 °C</button>
+              <button id="oil-60" type="button" data-oil="60" aria-pressed="false">60 °C</button>
+              <button id="oil-75" type="button" data-oil="75" aria-pressed="false">75 °C</button>
+              <button id="oil-85" type="button" data-oil="85" aria-pressed="false">85 °C</button>
+            </div>
             <div class="readouts">
-              <div><span class="small-caps">Oil °C</span><span class="seg" id="oil-v" style="color: var(--offwhite)">45</span></div>
-              <div><span class="small-caps">Shift at</span><span class="seg" id="rpm-v" style="color: var(--warn)">4750</span></div>
+              <div><span class="small-caps">Oil °C</span><span class="seg" id="oil-v" style="color: var(--offwhite)">50</span></div>
+              <div><span class="small-caps">Shift at</span><span class="seg" id="rpm-v" style="color: var(--offwhite)">5000</span></div>
               <div><span class="small-caps">Status</span><span class="state" id="st-v" style="color: var(--caution)">COLD</span></div>
             </div>
           </div>
@@ -219,6 +267,7 @@
   </div>
 </footer>
 
-<script src="../assets/in-development.js"></script>
+<script src="../assets/in-development.js?v=2"></script>
+<script src="../assets/site.js?v=2"></script>
 </body>
 </html>
