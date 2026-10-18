@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In development: the GR Yaris gauge · Nine Tenths Engineering</title>
+<meta name="description" content="A round AMOLED gauge for the Toyota GR Yaris, in development at Nine Tenths Engineering. Plugs into the OBD port and shows boost, temperatures, tires and warnings at a glance.">
+<meta name="theme-color" content="#0F1113">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="In development: the GR Yaris gauge">
+<meta property="og:description" content="A round AMOLED gauge for the Toyota GR Yaris. Plug it in, it already knows the car.">
+<meta property="og:image" content="https://ninetenths.se/assets/img/og.png">
+<meta property="og:url" content="https://ninetenths.se/in-development/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../assets/fonts/archivo-expanded-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/in-development.css">
+</head>
+<body class="dev">
+
+<header class="top">
+  <div class="wrap top__inner">
+    <a href="../" class="top__logo" aria-label="Nine Tenths Engineering, home"><img src="../assets/img/logo.svg" alt="Nine Tenths Engineering" width="176" height="33"></a>
+    <nav aria-label="Main">
+      <a href="../#work" class="nav-more">Work</a>
+      <a href="./" aria-current="page">In development</a>
+      <a href="../#about" class="nav-more">About</a>
+      <a href="https://trackdayshop.se" rel="noopener">Shop</a>
+      <a href="../#contact" class="top__cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap split">
+    <aside class="rig" aria-label="Live gauge">
+      <div class="rig__inner">
+        <div class="gauge-frame"><iframe id="gauge" src="gauge.html" title="The gauge, running on a simulated GR Yaris"></iframe></div>
+        <div class="rig__bar">
+          <span class="live small-caps">Live: the gauge's own UI</span>
+          <div class="units" role="group" aria-label="Units">
+            <button id="u-metric" type="button" data-units="METRIC" aria-pressed="true">Metric</button>
+            <button id="u-imperial" type="button" data-units="IMPERIAL" aria-pressed="false">Imperial</button>
+            <button id="u-uk" type="button" data-units="UK" aria-pressed="false">UK</button>
+          </div>
+        </div>
+        <div class="chips" role="group" aria-label="Drive the simulated car">
+          <button id="run-drive" type="button" data-run="drive" data-page="1" data-tone="go" aria-pressed="true"><i></i>On track</button>
+          <button id="run-cold" type="button" data-run="cold" data-page="0" data-tone="caution" aria-pressed="false"><i></i>Cold start</button>
+          <button id="run-heatsoak" type="button" data-run="heatsoak" data-page="1" data-tone="caution" aria-pressed="false"><i></i>Heat soak</button>
+          <button id="run-tuned" type="button" data-run="tuned" data-page="1" aria-pressed="false"><i></i>Tuned car</button>
+          <button id="run-pit" type="button" data-run="pit" data-page="4" data-tone="go" aria-pressed="false"><i></i>Pit stop</button>
+          <button id="run-lean" type="button" data-run="lean" data-page="2" data-tone="caution" aria-pressed="false"><i></i>Lean + knock</button>
+          <button id="run-oiltemp" type="button" data-run="oiltemp" data-page="3" data-tone="warn" aria-pressed="false"><i></i>Oil overheats</button>
+          <button id="run-puncture" type="button" data-run="puncture" data-page="4" data-tone="warn" aria-pressed="false"><i></i>Puncture</button>
+          <button id="run-oilp" type="button" data-run="oilp" data-page="2" data-tone="warn" aria-pressed="false"><i></i>Oil pressure</button>
+          <button id="run-alt" type="button" data-run="alt" data-page="0" data-tone="warn" aria-pressed="false"><i></i>Alternator</button>
+          <button id="run-mute" type="button" data-run="mute" data-page="3" aria-pressed="false"><i></i>ECU silent</button>
+        </div>
+        <p class="note" id="note" aria-live="polite"></p>
+        <p class="hint">Tap the gauge to change page; two quick taps open settings. A simulated car drives it, with the same logic as the firmware.</p>
+      </div>
+    </aside>
+
+    <div class="copy">
+      <section class="hero-dev" data-page="0">
+        <span class="status-pill small-caps">In development</span>
+        <h1 class="lean">Read the GR Yaris <em>at a glance.</em></h1>
+        <p class="lede">A round 1.75-inch AMOLED gauge that plugs into the OBD port and shows boost, temperatures, tires and warnings on true black, redrawn more than 90 times a second. There is nothing to set up: it already knows the car.</p>
+        <div class="fitment" aria-label="Fits">
+          <span>GR Yaris Gen 1</span><span>GR Yaris Gen 2</span><span>6-speed manual</span><span>8-speed automatic</span>
+        </div>
+        <div class="stripe lean" aria-hidden="true"></div>
+        <div class="strip" role="list">
+          <div role="listitem"><span class="seg">466</span><small>× 466 pixels, round AMOLED</small></div>
+          <div role="listitem"><span class="seg">266</span><small>pixels per inch</small></div>
+          <div role="listitem"><span class="seg">93</span><small>frames per second on the slowest page, measured</small></div>
+          <div role="listitem"><span class="seg">50</span><small>readings a second of boost, rpm, gear and speed (bench)</small></div>
+          <div role="listitem"><span class="seg">1</span><small>plug. No app, no laptop, no setup</small></div>
+        </div>
+      </section>
+
+      <section id="pages" data-page="0">
+        <p class="label">Six pages</p>
+        <h2 class="lean">One question per page</h2>
+        <p class="muted">Every page answers the question a driver actually asks. Swipe or tap through; the gauge starts on the page you left it on.</p>
+        <div class="tour" role="group" aria-label="Show a page on the gauge">
+          <button id="p0" type="button" data-page="0" aria-pressed="true"><span class="pn seg">1</span><span class="h">Tach <small>rpm · speed · gear</small></span><span class="q">What gear, how fast, when do I shift?</span><span class="d">The ring is the tachometer. Shift ladder bars light 1350, 900 and 450 rpm early; past the shift point the ring, gear box and ladder flash red together.</span></button>
+          <button id="p1" type="button" data-page="1" aria-pressed="false"><span class="pn seg">2</span><span class="h">Boost <small>boost · intake temps · power</small></span><span class="q">Am I making power, and what is heat soak costing me?</span><span class="d">Boost on a split ring like a mechanical gauge, peak hold, intake and charge-air temps with rising and falling trends, and PWR: full power against what this car normally makes in this gear and rpm.</span></button>
+          <button id="p2" type="button" data-page="2" aria-pressed="false"><span class="pn seg">3</span><span class="h">Engine <small>lambda · oil pressure · knock</small></span><span class="q">Is the engine healthy under load?</span><span class="d">Lambda against what the ECU commands, oil pressure against the minimum for the rpm, ignition timing and knock retard.</span></button>
+          <button id="p3" type="button" data-page="3" aria-pressed="false"><span class="pn seg">4</span><span class="h">Temps <small>water · oil · gearbox · rear coupling</small></span><span class="q">Will the car last the session?</span><span class="d">Oil and water end sessions; the gearbox and the GR-Four rear coupling are what the driveline lives on. Each on its own quarter arc, colored by zone.</span></button>
+          <button id="p4" type="button" data-page="4" aria-pressed="false"><span class="pn seg">5</span><span class="h">Tires <small>pressure · air temp · pit advice</small></span><span class="q">Do I have grip, and what do I adjust?</span><span class="d">Four corners as seen from the seat. Green on your hot target. In the pits it tells you how much to add or bleed, corner by corner.</span></button>
+          <button id="p5" type="button" data-page="5" aria-pressed="false"><span class="pn seg">6</span><span class="h">Session <small>peaks since you started</small></span><span class="q">How hot did it get, and did it hold back?</span><span class="d">Max temperatures, peak boost, the lowest full-power reading, the leanest mixture and the worst knock of the session.</span></button>
+        </div>
+      </section>
+
+      <section id="setup" data-page="0">
+        <p class="label">Set up by GR Yaris drivers</p>
+        <h2 class="lean">Our setup, not your homework</h2>
+        <p class="muted">Most dashes hand you a layout editor and a list of limits to look up. We made those calls for the G16E and the GR-Four driveline, so the gauge is right the first time you plug it in.</p>
+        <div class="sheet" role="table" aria-label="Setup decisions">
+          <div class="row head" role="row"><span class="k" role="columnheader">Decision</span><span class="v" role="columnheader">Value</span><span class="w" role="columnheader">Why</span></div>
+          <div class="row" role="row"><span class="k" role="cell">Ready to push</span><span class="v" role="cell">Oil 85 °C</span><span class="w" role="cell">The G16E is ready when its oil is. Water warms up much sooner, so it says nothing about full load.</span></div>
+          <div class="row" role="row"><span class="k" role="cell">Shift point</span><span class="v" role="cell">6500 rpm</span><span class="w" role="cell">Rated peak power on both generations, earlier while the oil is cold (try it below).</span></div>
+          <div class="row" role="row"><span class="k" role="cell">Gearbox</span><span class="v" role="cell">Detected</span><span class="w" role="cell">The gauge sees which control units answer and knows a 6MT from an 8AT. There is no car menu.</span></div>
+          <div class="row" role="row"><span class="k" role="cell">Boost scale</span><span class="v" role="cell">2.0 bar, grows</span><span class="w" role="cell">Stock peaks are about 1.5 bar (Gen 1) and 1.7 bar (Gen 2). On a tuned car the scale widens to 2.5 and 3.0 bar by itself.</span></div>
+          <div class="row" role="row"><span class="k" role="cell">Heat soak</span><span class="v" role="cell">IAT 50 · CACT 60 °C</span><span class="w" role="cell">The GR Yaris soaks its intake when parked. Past these the status says COOL DOWN and the trends show if it is still building.</span></div>
+          <div class="row" role="row"><span class="k" role="cell">Full power</span><span class="v" role="cell">Learned</span><span class="w" role="cell">It learns the boost your car makes at full throttle in every gear and rpm, and says PWR LOW when the ECU holds back.</span></div>
+          <div class="row" role="row"><span class="k" role="cell">Turbo cool-down</span><span class="v" role="cell">30 to 90 s</span><span class="w" role="cell">After hard laps the timer counts the idle the turbo needs before you switch off: 30 s plus the hard running, at most 90.</span></div>
+          <div class="row" role="row"><span class="k" role="cell">Driveline</span><span class="v" role="cell">110 · 120 °C</span><span class="w" role="cell">Gearbox and rear coupling turn orange here, a heads-up rather than a warning.</span></div>
+        </div>
+
+        <div class="warmup" aria-labelledby="warm-h">
+          <canvas id="dial" width="500" height="500" role="img" aria-label="Tach with the shift point for the chosen oil temperature"></canvas>
+          <div class="ctl">
+            <h3 id="warm-h">The shift light warms up with the oil</h3>
+            <p class="muted">Like a warm-up tach: cold oil means an earlier shift, rising in 250 rpm steps until READY.</p>
+            <label class="small-caps" for="oil">Oil temperature</label>
+            <input id="oil" type="range" min="20" max="100" step="1" value="45">
+            <div class="readouts">
+              <div><span class="small-caps">Oil °C</span><span class="seg" id="oil-v" style="color: var(--offwhite)">45</span></div>
+              <div><span class="small-caps">Shift at</span><span class="seg" id="rpm-v" style="color: var(--warn)">4750</span></div>
+              <div><span class="small-caps">Status</span><span class="state" id="st-v" style="color: var(--caution)">COLD</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="warnings" data-page="3">
+        <p class="label">Warnings</p>
+        <h2 class="lean">Red means look now</h2>
+        <p class="muted">Red is used for nothing else. When a limit is passed the warning takes over the whole screen until you tap it, then stays as a tag at the bottom until the value recovers. Try one on the gauge.</p>
+        <div class="warns">
+          <div class="w-row"><span class="tag">OIL</span><span class="t"><b>Oil over 130 °C</b><span>Clears under 125 °C.</span></span><button id="w-oil" type="button" data-run="oiltemp" data-page="3">Show me</button></div>
+          <div class="w-row"><span class="tag">WTR</span><span class="t"><b>Water over 110 °C</b><span>Clears under 105 °C.</span></span><span></span></div>
+          <div class="w-row"><span class="tag">OIL P</span><span class="t"><b>Oil pressure under the minimum for the rpm</b><span>0.5 bar at 1000 rpm rising to 1.5 bar from 4000, engine running.</span></span><button id="w-oilp" type="button" data-run="oilp" data-page="2">Show me</button></div>
+          <div class="w-row"><span class="tag">TIRE</span><span class="t"><b>A tire under 1.6 bar</b><span>Named by corner. Orange first, under 2.0 bar once the tire is warm.</span></span><button id="w-tire" type="button" data-run="puncture" data-page="4">Show me</button></div>
+          <div class="w-row"><span class="tag">BATT</span><span class="t"><b>Battery under 12.0 V for 10 s with the engine running</b><span>The alternator has stopped charging.</span></span><button id="w-batt" type="button" data-run="alt" data-page="0">Show me</button></div>
+        </div>
+      </section>
+
+      <section id="display" data-page="1">
+        <p class="label">The display</p>
+        <h2 class="lean">Built around the screen</h2>
+        <p class="muted">A gauge is only as good as what you can read in half a second at speed. So the screen came first: an AMOLED whose black pixels are switched off, our own renderer written for it, and three colors that only ever mean one thing.</p>
+        <div class="roles">
+          <div><span class="sw lean" style="background: var(--go)"></span><b style="color: var(--go)">Green</b><span>Go. In range, READY, on target.</span></div>
+          <div><span class="sw lean" style="background: var(--caution)"></span><b style="color: var(--caution)">Orange</b><span>Look soon. Near a limit, lean, knock, not warm yet.</span></div>
+          <div><span class="sw lean" style="background: var(--warn)"></span><b style="color: var(--warn)">Red</b><span>Look now. Warnings and the shift light, nothing else.</span></div>
+        </div>
+        <div class="compare">
+          <figure><canvas id="px-a" width="120" height="120" role="img" aria-label="A 5 mm digit at 266 pixels per inch"></canvas><figcaption><b>Our panel, 266 PPI.</b> A 7-segment digit 5 mm tall, pixel for pixel.</figcaption></figure>
+          <figure><canvas id="px-b" width="120" height="120" role="img" aria-label="The same digit at 125 pixels per inch"></canvas><figcaption><b>A typical 3.2-inch TFT dash, 125 PPI.</b> The same digit.</figcaption></figure>
+        </div>
+        <p class="muted">Values change the moment a new reading arrives; nothing is animated in between. A reading older than a second dims; older than three it turns to dashes. The gauge never shows a stale number as if it were live.</p>
+      </section>
+    </div>
+  </div>
+
+  <div class="band" id="install">
+    <div class="wrap">
+      <p class="label">Install</p>
+      <h2 class="lean">Plug in. Drive.</h2>
+      <div class="steps">
+        <div><h3>Plug it into the OBD port</h3><p>Under the dash on the driver's side. One cable to the gauge; unplug it whenever you need the port for a scan tool.</p></div>
+        <div><h3>Clip the pod to a vent</h3><p>The round gauge sits in a vent pod at eye level, in reach of a thumb for paging through.</p></div>
+        <div><h3>Start the car</h3><p>The gauge wakes with the car, opens on the page you left it on and switches itself off when the car goes to sleep.</p></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <p class="muted">The only settings are the ones that really are yours:</p>
+        <div class="settings"><span>Brightness</span><span>Burn-in protection</span><span>Hot tire targets</span><span>Units: Metric · Imperial · UK</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="band" id="spec">
+    <div class="wrap">
+      <p class="label">Specification</p>
+      <div class="homol">
+        <div class="hh"><b>Technical sheet</b><span class="small-caps">Pre-production · rev A</span></div>
+        <div class="hr"><span class="ix">01</span><div class="cell"><span class="small-caps">Display</span><span class="hd">1.75" round AMOLED, 466 × 466, about 266 PPI, true black, capacitive touch</span></div></div>
+        <div class="hr"><span class="ix">02</span><div class="cell"><span class="small-caps">Frame rate</span><span class="hd">93 to 131 frames per second depending on page, measured on the device</span></div></div>
+        <div class="hr"><span class="ix">03</span><div class="cell"><span class="small-caps">Data</span><span class="hd">Reads the car's control units over CAN through the OBD port; fast values 50 times a second on our test bench</span></div></div>
+        <div class="hr"><span class="ix">04</span><div class="cell"><span class="small-caps">Cars</span><span class="hd">Toyota GR Yaris Gen 1 and Gen 2, 6-speed manual and 8-speed automatic, detected automatically</span></div></div>
+        <div class="hr"><span class="ix">05</span><div class="cell"><span class="small-caps">Power</span><span class="hd">From the OBD port, fused in the plug; protected against spikes and reversed polarity; off when the car sleeps</span></div></div>
+        <div class="hr"><span class="ix">06</span><div class="cell"><span class="small-caps">Readings</span><span class="hd">Boost, rpm, speed, gear, oil, water, gearbox and rear coupling temps, intake temps, lambda, oil pressure, knock, tires, battery</span></div></div>
+        <div class="hr"><span class="ix">07</span><div class="cell"><span class="small-caps">Settings</span><span class="hd">Brightness, burn-in protection, front and rear hot tire targets, units</span></div></div>
+        <div class="hr"><span class="ix">08</span><div class="cell"><span class="small-caps">Software</span><span class="hd">Our own firmware in plain C with its own renderer, tested on every change; updates over the air planned</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="band" id="status">
+    <div class="wrap where">
+      <div>
+        <p class="label">Where it is</p>
+        <h2 class="lean">In development</h2>
+        <p class="muted">Everything on this page runs on the gauge today, fed by a simulated car on our bench. Every reading is now being checked against a real GR Yaris before a single unit ships. Readings we can't confirm on the car are left off.</p>
+        <p class="muted">Want one, or want to help test? <a href="mailto:mikael@ninetenths.se">mikael@ninetenths.se</a></p>
+      </div>
+      <div class="track">
+        <div class="done"><i></i><p><b>Firmware and all six pages</b><span>Running on the display at 93 to 131 fps.</span></p></div>
+        <div class="now"><i></i><p><b>Validation on a GR Yaris</b><span>Every reading against the car, both gearboxes.</span></p></div>
+        <div><i></i><p><b>Production board and vent pod</b><span>Board designed, first units being built.</span></p></div>
+        <div><i></i><p><b>Pilot batch for GR Yaris owners</b><span>A small first run, installed and supported by us.</span></p></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <img src="../assets/img/logo.svg" alt="Nine Tenths Engineering" width="132" height="25">
+    <p>© 2026 Nine Tenths Engineering AB · Sweden</p>
+    <p class="legal">Toyota and GR Yaris are trademarks of Toyota Motor Corporation. Nine Tenths Engineering is not affiliated with Toyota. The gauge on this page is a simulation; its values are not from a real car.</p>
+  </div>
+</footer>
+
+<script src="../assets/in-development.js"></script>
+</body>
+</html>

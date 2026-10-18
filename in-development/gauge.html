@@ -1,0 +1,1936 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gauge</title>
+<meta name="robots" content="noindex">
+<style>
+  @font-face { font-family: "DSEG7";  font-weight: 400; src: url("data:font/woff2;base64,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") format("woff2"); }
+  @font-face { font-family: "DSEG7";  font-weight: 700; src: url("data:font/woff2;base64,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") format("woff2"); }
+  @font-face { font-family: "DSEG14"; font-weight: 400; src: url("data:font/woff2;base64,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") format("woff2"); }
+  @font-face { font-family: "DSEG14"; font-weight: 700; src: url("data:font/woff2;base64,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") format("woff2"); }
+
+  :root {
+    --bg: #0d0e10;
+    --panel: #16181b;
+    --line: #2a2d32;
+    --text: #d8d9dc;
+    --muted: #8a8e96;
+    --amber: #ffb000;
+    --red: #ff3b1f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main {
+    display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; justify-content: center;
+    padding: 32px 16px;
+  }
+
+  /* ---- device ---- */
+  .stage { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .bezel {
+    border-radius: 50%;
+    padding: var(--bez, 26px);
+    background:
+      radial-gradient(circle at 30% 25%, #4a4d52 0%, #232528 38%, #0b0c0d 70%, #2b2d31 100%);
+    box-shadow: 0 18px 50px rgba(0,0,0,.6), inset 0 2px 3px rgba(255,255,255,.12);
+    position: relative;
+  }
+  .glass {
+    position: relative; border-radius: 50%; overflow: hidden; background: #000;
+    box-shadow: inset 0 0 0 2px #000, 0 0 0 1px #000;
+    touch-action: none; cursor: pointer; user-select: none;
+  }
+  .glass canvas { display: block; }
+  .glass::after { /* faint cover-glass reflection */
+    content: ""; position: absolute; inset: 0; border-radius: 50%; pointer-events: none;
+    background: linear-gradient(140deg, rgba(255,255,255,.07) 0%, rgba(255,255,255,0) 35%);
+  }
+  .caption { color: var(--muted); font-size: 12px; text-align: center; max-width: 520px; }
+
+  /* ---- control panel ---- */
+  .panel {
+    width: 340px; max-width: 100%;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px;
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .panel h1 { font-size: 15px; margin: 0; letter-spacing: .04em; }
+  .group { display: flex; flex-direction: column; gap: 6px; }
+  .group > label, .group > .lbl { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+  .row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  button {
+    font: inherit; font-size: 13px; color: var(--text); background: #1f2226; border: 1px solid var(--line);
+    border-radius: 6px; padding: 5px 9px; cursor: pointer;
+  }
+  button:hover { border-color: #444951; }
+  button.on { background: #3a2a00; border-color: var(--amber); color: var(--amber); }
+  button.warn.on { background: #3a0e08; border-color: var(--red); color: var(--red); }
+  kbd {
+    font: 11px ui-monospace, monospace; color: var(--muted); border: 1px solid var(--line);
+    border-radius: 3px; padding: 0 4px; margin-left: 4px;
+  }
+  input[type=range] { flex: 1; accent-color: var(--amber); }
+  input[type=number] { width: 64px; font: inherit; background: #0f1012; color: var(--text); border: 1px solid var(--line); border-radius: 4px; padding: 3px 5px; }
+  .readout {
+    font: 12px/1.6 ui-monospace, "SF Mono", Menlo, monospace; color: var(--muted);
+    display: grid; grid-template-columns: auto 1fr auto 1fr; gap: 0 10px;
+  }
+  .readout b { color: var(--text); font-weight: 500; }
+  .hint { color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="stage">
+    <div class="bezel" id="bezel">
+      <div class="glass" id="glass"><canvas id="cv"></canvas></div>
+    </div>
+    <div class="caption" id="caption"></div>
+  </div>
+
+  <div class="panel">
+    <h1>GR GAUGE — display mock</h1>
+
+    <div class="group">
+      <span class="lbl">Page <span class="hint">(click display / swipe / ← →, 2 clicks = settings)</span></span>
+      <div class="row" id="pages"></div>
+    </div>
+
+    <div class="group">
+      <span class="lbl">Scenario (fake-ecu model)</span>
+      <div class="row">
+        <button data-sc="normal">Normal<kbd>n</kbd></button>
+        <button data-sc="heatsoak">Heat soak<kbd>h</kbd></button>
+        <button data-sc="oiltemp" class="warn">Oil overtemp<kbd>o</kbd></button>
+        <button data-sc="lean">Lean + knock<kbd>k</kbd></button>
+        <button data-sc="oilp" class="warn">Low oil pressure<kbd>e</kbd></button>
+        <button id="cold">Cold start<kbd>c</kbd></button>
+        <button id="puncture" class="warn">Slow puncture FL<kbd>f</kbd></button>
+        <button id="pit">Pit stop (idle)<kbd>i</kbd></button>
+        <button id="tuned">Tuned car (2.0 bar)<kbd>x</kbd></button>
+        <button id="alt" class="warn">Alternator fault<kbd>v</kbd></button>
+      </div>
+    </div>
+
+    <div class="group">
+      <span class="lbl">Bus faults</span>
+      <div class="row">
+        <button id="mute" class="warn">Mute ECU<kbd>m</kbd></button>
+        <button id="pending">0x78 pending<kbd>p</kbd></button>
+        <button id="latency">+0 ms<kbd>l</kbd></button>
+      </div>
+    </div>
+
+    <div class="group">
+      <span class="lbl">Display</span>
+      <div class="row">
+        <span class="hint" style="width:70px">Brightness</span>
+        <input type="range" id="bright" min="10" max="100" value="100">
+        <span class="hint" id="brightv" style="width:34px;text-align:right">100%</span>
+      </div>
+      <div class="row">
+        <button id="boot">Boot animation<kbd>b</kbd></button>
+        <button id="settings">Settings<kbd>s</kbd></button>
+        <button id="orbit">Pixel orbit (fast demo)</button>
+      </div>
+    </div>
+
+    <div class="group">
+      <span class="lbl">Scale</span>
+      <div class="row" id="scales">
+        <button data-scale="1">1:1 px</button>
+        <button data-scale="1.5">1.5×</button>
+        <button data-scale="real">Real size</button>
+        <span class="hint">screen PPI</span><input type="number" id="ppi" min="50" max="600">
+      </div>
+    </div>
+
+    <div class="group">
+      <span class="lbl">Gauge sees</span>
+      <div class="readout" id="readout"></div>
+    </div>
+
+    <div class="hint">
+      Values update on poll arrival only (fast tier 50 Hz, medium 2 Hz) — no tweening.
+      Older than 1 s dims, older than 3 s goes to dashes. Oil &gt; 130 °C, water &gt; 110 °C,
+      a tire under 1.6 bar or oil pressure under its rpm minimum takes over the screen; tap or
+      <kbd>space</kbd> to acknowledge.
+    </div>
+  </div>
+</main>
+
+<script>
+"use strict";
+
+/* ================================================================
+ * Engine model — straight port of fake-ecu sim_step() (50 Hz)
+ * ================================================================ */
+const RPM_LIMIT = 7000;
+const eng = { rpm: 900, throttle: 0, boost: -0.45, coolant: 88, oil: 97, iat: 26, cact: 36, gbox: 70, rdiff: 60, gear: 0,
+              speed: 0, lam: 1, lamCmd: 1, ign: 8, knock: 0, oilp: 1.6, batt: 14.2 };
+let simT = 0;
+let scenario = "normal";
+
+/* Oil overtemp: a straight ramp that crosses the 130 C warning OIL_WARN_S
+ * after the key press; the 2 Hz medium poll adds up to 0.5 s, so the
+ * takeover shows ~3 s after pressing 'o'. */
+const OIL_HOT = 136, OIL_WARN_C = 130, OIL_WARN_S = 2.75;
+let oilRamp = 0;   // deg C/s
+function startOilRamp() { oilRamp = Math.max((OIL_WARN_C - eng.oil) / OIL_WARN_S, 2); }
+
+const approach = (v, target, k) => v + (target - v) * k;
+
+/* Tires (TPMS): air temp follows load slowly, pressure follows temp. Demo
+ * values: set to 1.8 bar cold (20 C), rising TIRE_BAR_PER_C to about 2.2 bar
+ * at running temp (~45 C fronts, ~40 C rears). Fronts and the left side work
+ * harder. Linear, not the gas law: real tires gain more on track. */
+const TIRES = ["fl", "fr", "rl", "rr"];
+const TIRE_COLD_BAR = 1.8, TIRE_BAR_PER_C = 0.017, TIRE_LOAD = { fl: 1.1, fr: 1.0, rl: 0.85, rr: 0.8 };
+const tire = {};
+for (const k of TIRES) tire[k] = { t: 20, cold: TIRE_COLD_BAR };
+let puncture = false;      // slow leak, front left
+let tuned = false;         // a tuned car: boost by gear, 1.6 bar in 1st/2nd, 2.0 from 3rd
+let pit = false;           // parked in the pits: engine idles, cycle paused
+let altFault = false;      // the alternator stops charging: the battery runs down
+const tirePressure = k => tire[k].cold + TIRE_BAR_PER_C * (tire[k].t - 20);
+
+/* Engine page signals and speed. Wideband lambda (PID 0x34) and commanded
+ * (0x44): rich under boost, 1.0 otherwise; on a decel fuel cut the wideband
+ * reads air. Timing (0x0E) includes the knock correction (0x700 22 105C,
+ * negative = retard), which pulls fast and gives back slowly. Oil pressure
+ * (0x700 22 1074) rises with rpm and is higher with cold, thick oil. The car's
+ * support for these is still to be measured (docs/gr-yaris-can.md). Speed
+ * (0x0D) from rpm through the 8AT's ratios. */
+const GEAR_RATIO = [4.435, 2.809, 1.933, 1.497, 1.266, 1.000, 0.793, 0.650], FINAL_DRIVE = 3.329, TIRE_CIRC_M = 2.0;
+function simEngineExtras() {
+  const boosted = eng.throttle > 0.8 && eng.boost > 0.3, cut = eng.throttle === 0 && eng.rpm > 1500;
+  eng.lamCmd = boosted ? (tuned ? 0.78 : 0.82) : 1.0;
+  eng.lam = approach(eng.lam, cut ? 1.9 : eng.lamCmd + (scenario === "lean" && boosted ? 0.1 : 0), 0.12);
+  const kTarget = !boosted ? 0 : scenario === "lean" ? -4 : scenario === "heatsoak" ? -1.5 : 0;
+  eng.knock = approach(eng.knock, kTarget, kTarget < eng.knock ? 0.3 : 0.01);
+  const ignBase = cut ? 5 : eng.rpm < 1300 && eng.throttle < 0.1 ? 8 : boosted ? 20 - 7 * eng.boost : 26;
+  eng.ign = approach(eng.ign, ignBase + eng.knock, 0.2);
+  const visc = 1 + Math.max(0, 90 - eng.oil) * 0.012;
+  eng.oilp = approach(eng.oilp, Math.min(7, Math.min(5.6, 0.9 + eng.rpm * 0.00075) * visc) * (scenario === "oilp" ? 0.2 : 1), 0.2);
+  eng.speed = eng.gear >= 1 ? eng.rpm * TIRE_CIRC_M * 60 / (GEAR_RATIO[eng.gear - 1] * FINAL_DRIVE * 1000)
+                            : approach(eng.speed, 0, pit ? 0.2 : 0.01);
+}
+
+function simStep(dt) {
+  if (!pit) simT = (simT + dt) % 34;            // wrap: the drive cycle is 34 s
+  const cycle = simT;
+  if (pit || cycle < 6) {                       // idle (or parked in the pits)
+    eng.throttle = 0.05; eng.gear = 0;
+    eng.rpm = approach(eng.rpm, 900, 0.05);
+  } else if (cycle < 26) {                      // pull, shifting at 6800
+    eng.throttle = 1.0;
+    if (eng.gear === 0) eng.gear = 1;
+    eng.rpm += 1400 * dt * (1.6 - eng.rpm / 7000);
+    if (eng.rpm > 6800 && eng.gear < 6) { eng.gear++; eng.rpm = 4300; }
+    if (eng.rpm > RPM_LIMIT) eng.rpm = RPM_LIMIT - 150;
+  } else {                                      // decel
+    eng.throttle = 0;
+    eng.rpm = approach(eng.rpm, 1100, 0.03);
+    if (eng.rpm < 1500) eng.gear = 0;
+  }
+  let spool = Math.min(1, (eng.rpm - 1800) / 2700); if (spool < 0) spool = 0;
+  const bPeak = !tuned ? 1.5 : eng.gear <= 2 ? 1.6 : 2.0;
+  let bTarget = eng.throttle > 0.2 ? bPeak * spool * eng.throttle : -0.45;
+  if (scenario === "heatsoak") bTarget *= 0.82;
+  eng.boost = approach(eng.boost, bTarget, 0.09);
+
+  const load = eng.throttle * (eng.rpm / 7000);
+  eng.coolant = approach(eng.coolant, 92 + load * 6, 0.0015);
+  if (scenario === "oiltemp" && eng.oil < OIL_HOT)
+    eng.oil = Math.min(OIL_HOT, eng.oil + oilRamp * dt);
+  else
+    eng.oil = approach(eng.oil, scenario === "oiltemp" ? OIL_HOT : 104 + load * 10, 0.0009);
+  const iatBase = scenario === "heatsoak" ? 52 : 26;
+  eng.iat = approach(eng.iat, iatBase + Math.max(0, eng.boost) * 14, 0.01);
+  const cactBase = scenario === "heatsoak" ? 68 : 34;
+  eng.cact = approach(eng.cact, cactBase + Math.max(0, eng.boost) * 10, 0.004);
+  // driveline oils heat slowly with load; the rear diff (GR-Four coupling) runs hotter
+  const soak = scenario === "heatsoak" ? 15 : 0;
+  eng.gbox = approach(eng.gbox, 60 + soak + 55 * load, 0.0006);
+  eng.rdiff = approach(eng.rdiff, 50 + soak + 70 * load, 0.0005);
+
+  simEngineExtras();
+  for (const k of TIRES) tire[k].t = approach(tire[k].t, 22 + 45 * load * TIRE_LOAD[k], 0.0006);
+  // battery (PID 0x42): ~14.2 V charging; with the alternator gone it sinks under 12 V in about 30 s
+  eng.batt = approach(eng.batt, altFault ? 11.6 : 14.2, altFault ? 0.0015 : 0.02);
+  if (puncture) tire.fl.cold = Math.max(0.8, tire.fl.cold - 0.1 * dt);
+}
+
+/* ================================================================
+ * "Gauge side": serial UDS poller with tiers, latest-value cache
+ * ================================================================ */
+/* Tiers: fast 50 Hz (boost, rpm, gear, throttle, speed), mid 10 Hz (the
+ * engine page: lambda, timing, commanded lambda, knock, oil pressure),
+ * medium 2 Hz (temps, tires) */
+const FAST_MS = 20, MID_MS = 100, MED_MS = 500, BASE_RTT_MS = 6;
+const fault = { mute: false, pending: false, latency: 0 };
+const LATENCIES = [0, 20, 50, 100];
+
+const ch = {};            // name -> { v, ts, over }; over: v is only a lower bound (PID pinned)
+for (const k of ["boost", "rpm", "gear", "tps", "speed", "lam", "ign", "lamCmd", "knock", "oilp",
+                 "coolant", "oil", "iat", "cact", "gbox", "rdiff", "batt"]) ch[k] = { v: null, ts: -1e9 };
+for (const k of TIRES) ch["tp_" + k] = { v: null, ts: -1e9 }, ch["tt_" + k] = { v: null, ts: -1e9 };
+
+let inflight = false, lastFast = -1e9, lastMid = -1e9, lastMed = -1e9;
+const fastArrivals = [];  // timestamps, for achieved-rate readout
+
+function pump() {
+  if (inflight) return;
+  const now = performance.now();
+  let tier = null;
+  if (now - lastMed >= MED_MS) tier = "med";
+  else if (now - lastMid >= MID_MS) tier = "mid";
+  else if (now - lastFast >= FAST_MS) tier = "fast";
+  if (!tier) return;
+  if (tier === "med") lastMed = now; else if (tier === "mid") lastMid = now; else lastFast = now;
+
+  inflight = true;
+  if (fault.mute) {                       // no answer: P2 timeout, then retry
+    setTimeout(() => { inflight = false; }, 150);
+    return;
+  }
+  const snap = tier === "fast"
+    ? { boost: eng.boost, rpm: eng.rpm, gear: eng.gear, tps: eng.throttle,   // tps: PID 0x11 on the car
+        speed: eng.speed }
+    : tier === "mid" ? { lam: eng.lam, ign: eng.ign, lamCmd: eng.lamCmd, knock: eng.knock, oilp: eng.oilp }
+    : { coolant: eng.coolant, oil: eng.oil, iat: eng.iat, cact: eng.cact, gbox: eng.gbox, rdiff: eng.rdiff, batt: eng.batt };
+  if (tier === "med") for (const k of TIRES) { snap["tp_" + k] = tirePressure(k); snap["tt_" + k] = tire[k].t; }
+  const rtt = BASE_RTT_MS + fault.latency + (fault.pending ? 300 : 0);
+  setTimeout(() => {
+    const t = performance.now();
+    for (const k in snap) { ch[k].v = snap[k]; ch[k].ts = t; ch[k].over = false; }
+    // boost as the car's 1-byte MAP PID reports it: pinned at 255 kPa, then only "at least"
+    if ("boost" in snap && snap.boost * 100 + 101.3 >= 255) { ch.boost.v = (255 - 101.3) / 100; ch.boost.over = true; }
+    if (tier === "fast") { fastArrivals.push(t); while (fastArrivals.length && t - fastArrivals[0] > 1000) fastArrivals.shift(); }
+    inflight = false;
+    pump();
+  }, rtt);
+}
+
+/* Staleness: 1 = fresh, 0.4 = dim (>1 s), 0 = stale (>3 s) */
+function fresh(c, now) {
+  if (c.v === null) return 0;
+  const age = now - c.ts;
+  return age < 1000 ? 1 : age < 3000 ? 0.4 : 0;
+}
+
+/* ================================================================
+ * Warnings
+ * ================================================================ */
+/* Oil pressure: the minimum rises with rpm, from 0.5 bar at 1000 rpm to
+ * 1.5 bar from 4000 rpm. Judged only with the engine running (fresh rpm over
+ * 500; under that the warning clears) and only after OILP_HOLD_MS below it,
+ * so a single bad sample can't take over the screen. Starting points to tune
+ * in the car. */
+const OILP_RUN_RPM = 500, OILP_HOLD_MS = 300, OILP_HYST = 0.3;
+/* Battery (PID 0x42, control module voltage): under BATT_LOW for
+ * BATT_HOLD_MS with the engine running means the alternator isn't charging;
+ * clears over BATT_OK. The hold rides out the dips of starting and of
+ * Toyota's charge control. Starting points to check in the car. */
+const BATT_LOW = 12.0, BATT_OK = 12.4, BATT_HOLD_MS = 10000;
+const oilpMin = rpm => 0.5 + Math.max(0, Math.min(1, (rpm - 1000) / 3000));
+/* below: trips under `on`, clears over `off` (tire pressure, hot, bar); on/off
+ * may be functions (oil pressure, by rpm); hold: ms past `on` before it trips */
+const WARN = [
+  { key: "oil",     label: "OIL", on: 130, off: 125 },
+  { key: "coolant", label: "WTR", on: 110, off: 105 },
+  { key: "oilp",    label: "OIL P", unit: "bar", below: true, running: true, hold: OILP_HOLD_MS,
+    on: () => oilpMin(ch.rpm.v), off: () => oilpMin(ch.rpm.v) + OILP_HYST },
+  { key: "batt",    label: "BATT", unit: "V", below: true, running: true, hold: BATT_HOLD_MS, on: BATT_LOW, off: BATT_OK },
+  ...TIRES.map(k => ({ key: "tp_" + k, label: "TIRE " + k.toUpperCase(), tire: k.toUpperCase(), unit: "bar", on: 1.6, off: 1.8, below: true })),
+];
+const warnState = {};     // key -> { active, acked, since }
+for (const w of WARN) warnState[w.key] = { active: false, acked: false, since: null };
+
+function evalWarnings(now) {
+  for (const w of WARN) {
+    const s = warnState[w.key], c = ch[w.key];
+    if (fresh(c, now) === 0) continue;
+    if (w.running) {                       // only with the engine running
+      if (fresh(ch.rpm, now) === 0) continue;
+      if (ch.rpm.v < OILP_RUN_RPM) { s.active = false; s.acked = false; s.since = null; continue; }
+    }
+    const on = typeof w.on === "function" ? w.on() : w.on, off = typeof w.off === "function" ? w.off() : w.off;
+    const trip = w.below ? c.v < on : c.v > on, clear = w.below ? c.v > off : c.v < off;
+    if (!trip) s.since = null;
+    if (!s.active && trip) {
+      s.since ??= now;
+      if (now - s.since >= (w.hold ?? 0)) { s.active = true; s.acked = false; }
+    } else if (s.active && clear) { s.active = false; s.acked = false; }
+  }
+}
+const takeover = () => WARN.find(w => warnState[w.key].active && !warnState[w.key].acked);
+const activeWarnings = () => WARN.filter(w => warnState[w.key].active);
+
+/* ================================================================
+ * Track aids: full-power estimate, push readiness, turbo cool-down.
+ * Everything here reads only what the gauge has received (ch), like the
+ * warnings, so it behaves the same on the car.
+ * ================================================================ */
+
+/* Full power: at wide-open throttle, compare boost with the best boost
+ * learned for this gear and rpm bin (250 rpm, 3000-7000). Power is roughly
+ * proportional to absolute manifold pressure, so
+ * PWR % = (boost + 1 atm) / (learned + 1 atm). Learning only happens while
+ * intake temps are healthy; it rises fast and decays slowly. */
+const PWR_RPM_MIN = 3000, PWR_RPM_MAX = 7000, PWR_BIN = 250, PWR_GEARS = 8;   // 8: the GR-DAT; the 6MT leaves 7th and 8th empty
+const PWR_LOW_PCT = 95, PWR_OK_PCT = 97, ATM = 1.013;
+const PWR_BINS = (PWR_RPM_MAX - PWR_RPM_MIN) / PWR_BIN, PWR_CELLS = PWR_GEARS * PWR_BINS;
+const pwrBase = Array.from({ length: PWR_GEARS }, () => new Array(PWR_BINS).fill(null));
+
+/* The learned table survives a reload (NVS on the device). It changes on
+ * every full-throttle sample, so to spare the flash it is written at most
+ * every PWR_SAVE_EVERY_MS, only after PWR_SAVE_QUIET_MS off full throttle,
+ * and only once the engine has idled PWR_SAVE_IDLE_MS (or nothing arrives):
+ * on the device a flash write stalls the screen and the CAN polling, so never
+ * mid-lap. No reset: each cell rises fast and decays slowly, so after a
+ * retune it relearns by itself. A table saved with fewer gears (6, before
+ * the 8AT) loads into the first gears. */
+const PWR_SAVE_EVERY_MS = 120000, PWR_SAVE_QUIET_MS = 10000, PWR_SAVE_IDLE_MS = 3000;
+const pwrStore = { dirty: false, savedAt: -1e9, lastWot: -1e9 };
+const pwrLearned = () => pwrBase.reduce((n, g) => n + g.filter(v => v !== null).length, 0);
+function pwrSave(now) {
+  try { localStorage.setItem("grg-pwr-base", JSON.stringify(pwrBase)); } catch {}
+  pwrStore.dirty = false; pwrStore.savedAt = now;
+}
+function pwrLoad() {
+  try {
+    const t = JSON.parse(localStorage.getItem("grg-pwr-base"));
+    if (!Array.isArray(t) || t.length < 1 || t.length > PWR_GEARS) return;
+    t.forEach((g, i) => { if (Array.isArray(g) && g.length === PWR_BINS)
+      g.forEach((v, b) => { pwrBase[i][b] = typeof v === "number" && v > -1 && v < 4 ? v : null; }); });
+  } catch {}
+}
+const trk = {
+  pwr: null, pwrTs: -1e9, low: false, lowSince: null, okSince: null,   // full power
+  wotSince: null, wotGear: 0, prev: null,                              // prev: last settled boost sample of the pull
+  state: "COLD", readyAt: -1e9,                                        // readiness, READY splash
+  hard: 0, idleSince: null, turboNeed: 0,                               // turbo cool-down
+  pitTp: null,                                                          // hot pressures when parking
+};
+
+/* Readiness thresholds. Hot limits sit below the warning takeovers and match
+ * the temps page caution colors (IAT 50, CACT 60). */
+/* READY is oil temperature alone: from READY_OIL, fixed (our call for the
+ * G16E, not a setting). Water and tires don't decide it. COLD is under 60 C. */
+const READY_OIL = 85, READY_COLD = 60;
+const READY_HYST = 5;     // once READY, only drop back to WARMING this far below (C)
+const HOT = { iat: 50, cact: 60, oil: 125, wtr: 105 }, HOT_CLEAR = { iat: 45, cact: 55, oil: 120, wtr: 100 };
+const READY_SPLASH_MS = 3000, READY_BLINK_MS = 250;   // blinks like the takeover
+/* Turbo cool-down: no speed signal yet, so "parked" = 20 s of continuous idle
+ * (coasting and short idles on track stay well under that). Needed idle is
+ * 30-90 s, longer the harder the car was driven just before. */
+const TURBO_IDLE_MS = 20000, TURBO_OK_MS = 30000;
+
+function freshAll(now, ...cs) { return cs.every(c => fresh(c, now) > 0); }
+/* now given: only values still arriving count (readiness); without it, every value as last received */
+function isHot(clear, now) {
+  const L = clear ? HOT_CLEAR : HOT, f = c => now === undefined || fresh(c, now) > 0;
+  return (f(ch.iat) && ch.iat.v > L.iat) || (f(ch.cact) && ch.cact.v > L.cact) ||
+         (f(ch.oil) && ch.oil.v > L.oil) || (f(ch.coolant) && ch.coolant.v > L.wtr);
+}
+
+function trackStep(now, dt) {
+  const rpm = ch.rpm.v, tps = ch.tps.v, gear = ch.gear.v, boost = ch.boost.v;
+  const fast = freshAll(now, ch.rpm, ch.tps, ch.gear, ch.boost);
+
+  // --- full power
+  const wot = fast && tps >= 0.9 && gear >= 1 && rpm >= PWR_RPM_MIN && rpm < PWR_RPM_MAX;
+  if (!wot || gear !== trk.wotGear) { trk.wotSince = wot ? now : null; trk.wotGear = gear; trk.prev = null; }
+  if (wot) pwrStore.lastWot = now;
+  // one step per boost sample (frames repeat a sample); the table learns from the lower of this sample and
+  // the one before, so a single spike can neither seed a cell nor pull one up
+  if (wot && now - trk.wotSince >= 400 && !(trk.prev && ch.boost.ts === trk.prev.ts)) {   // boost settled, a new sample
+    const prev = trk.prev;
+    trk.prev = ch.boost.over ? null : { v: boost, ts: ch.boost.ts };
+    if (gear <= PWR_GEARS && !ch.boost.over) {                         // known: not over range
+      const cell = pwrBase[gear - 1], bin = Math.floor((rpm - PWR_RPM_MIN) / PWR_BIN);
+      if (cell[bin] !== null) {
+        const pct = Math.min(100, (boost + ATM) / (cell[bin] + ATM) * 100);
+        trk.pwr = trk.pwr === null ? pct : approach(trk.pwr, pct, 0.15);
+        trk.pwrTs = now;
+        if (pct < PWR_LOW_PCT) { trk.okSince = null; trk.lowSince ??= now; if (now - trk.lowSince >= 700) trk.low = true; }
+        else if (pct > PWR_OK_PCT) { trk.lowSince = null; trk.okSince ??= now; if (now - trk.okSince >= 1000) trk.low = false; }
+      }
+      if (prev && !isHot(true)) {                                      // learn only while healthy
+        const b = Math.min(boost, prev.v), sdt = Math.min((ch.boost.ts - prev.ts) / 1000, 0.1);
+        if (cell[bin] === null || b > cell[bin]) cell[bin] = cell[bin] === null ? b : approach(cell[bin], b, 0.3);
+        else cell[bin] -= 0.003 * sdt;                                 // slow decay
+        pwrStore.dirty = true;
+      }
+    }
+  }
+  const calm = (trk.idleSince !== null && now - trk.idleSince >= PWR_SAVE_IDLE_MS) || !fresh(ch.rpm, now);
+  if (pwrStore.dirty && now - pwrStore.lastWot >= PWR_SAVE_QUIET_MS && calm && now - pwrStore.savedAt >= PWR_SAVE_EVERY_MS) pwrSave(now);
+
+  // --- turbo cool-down: hard running decays over ~2 min; idle after it starts a timer
+  if (fast && tps >= 0.7 && boost > 0.8) trk.hard += dt;
+  trk.hard *= Math.exp(-dt / 120);
+  const idle = fast && rpm < 1300 && tps < 0.1;
+  if (!idle) trk.idleSince = null;
+  else if (trk.idleSince === null) {
+    trk.idleSince = now;
+    trk.turboNeed = trk.hard >= 5 ? Math.min(90, 30 + trk.hard) * 1000 : 0;
+    // pit advice uses the pressures as they were when the car stopped: still hot
+    trk.pitTp = trk.hard >= 5 && TIRES.every(k => fresh(ch["tp_" + k], now) > 0)
+      ? Object.fromEntries(TIRES.map(k => [k, ch["tp_" + k].v])) : null;
+  }
+
+  // --- readiness
+  // oil alone; COOL DOWN on heat soak, judged on the temperatures still arriving
+  const h = trk.state === "READY" ? READY_HYST : 0;   // hysteresis: no READY/WARMING flicker
+  let st = trk.state;
+  if (!fresh(ch.oil, now)) st = "COLD";
+  else if (isHot(st === "COOL DOWN", now)) st = "COOL DOWN";
+  else if (ch.oil.v < READY_COLD) st = "COLD";
+  else if (ch.oil.v < READY_OIL - h) st = "WARMING";
+  else st = "READY";
+  if (st === "READY" && trk.state !== "READY") trk.readyAt = now;
+  trk.state = st;
+}
+
+/* Under boost (wide-open throttle with real boost) for BOOST_SETTLE_MS:
+ * where lambda must be rich, and the fueling has caught up with the spool-up.
+ * Lean = the wideband more than LEAN_DELTA over commanded there. Lambda
+ * arrives at 10 Hz and throttle at 50 Hz, so a lambda sample is only judged
+ * once a newer throttle and boost reading shows the car was still on boost:
+ * a sample taken just after a lift (fuel cut, reading lean) never counts. */
+const LEAN_DELTA = 0.05, BOOST_SETTLE_MS = 500;
+let boostSince = null;
+const lamB = { pending: false, ts: -1, v: 0, cmd: null, lean: false, sample: null };   // sample: last one under boost
+function boostStep(now) {
+  const on = freshAll(now, ch.tps, ch.boost) && ch.tps.v >= 0.8 && ch.boost.v > 0.3;
+  if (!on) boostSince = null; else boostSince ??= now;
+  if (lamB.pending && ch.tps.ts > lamB.ts && ch.boost.ts > lamB.ts) {
+    lamB.pending = false;
+    const ok = boostSince !== null && lamB.ts - boostSince >= BOOST_SETTLE_MS;
+    lamB.lean = ok && lamB.cmd !== null && lamB.v > lamB.cmd + LEAN_DELTA;
+    if (ok) lamB.sample = { v: lamB.v, lean: lamB.lean, ts: now };
+  }
+  if (fresh(ch.lam, now) > 0 && ch.lam.ts !== lamB.ts) {     // a new lambda sample: wait for the throttle
+    Object.assign(lamB, { pending: true, ts: ch.lam.ts, v: ch.lam.v, cmd: fresh(ch.lamCmd, now) > 0 ? ch.lamCmd.v : null });
+  }
+  if (!on) lamB.lean = false;
+}
+const underBoost = now => boostSince !== null && now - boostSince >= BOOST_SETTLE_MS;
+const lamLean = now => underBoost(now) && lamB.lean;
+
+/* Parked after a run (same 20 s idle as the turbo timer) with hot pressures captured */
+const pitAdvice = now => trk.idleSince !== null && trk.pitTp !== null && now - trk.idleSince >= TURBO_IDLE_MS;
+
+/* Peaks since boot: the highest temps and boost, the lowest PWR, the most
+ * knock retard and the leanest lambda under boost since power-on, never reset.
+ * Only fresh values count. */
+const SES_MAX = ["coolant", "oil", "iat", "cact", "gbox", "rdiff", "boost"];
+const session = { start: performance.now(), pwrMin: null, pwrTs: -1e9, boostOver: false, knock: null, lam: null, lamLean: false, lamTs: -1e9 };
+for (const k of SES_MAX) session[k] = null;
+function sessionStep(now) {
+  if (fresh(ch.knock, now) > 0 && (session.knock === null || ch.knock.v < session.knock)) session.knock = ch.knock.v;
+  const ls = lamB.sample;
+  if (ls && ls.ts > session.lamTs) {                    // a new lambda sample under boost
+    session.lamTs = ls.ts;
+    if (session.lam === null || ls.v > session.lam) { session.lam = ls.v; session.lamLean = ls.lean; }
+  }
+  for (const k of SES_MAX) {
+    const c = ch[k];
+    if (fresh(c, now) > 0 && (session[k] === null || c.v > session[k] || (c.over && c.v >= session[k]))) {
+      session[k] = c.v;
+      if (k === "boost") session.boostOver = !!c.over;    // the peak was over range: at least
+    }
+  }
+  if (trk.pwrTs > session.pwrTs) {                               // a new full-throttle sample
+    session.pwrTs = trk.pwrTs;
+    session.pwrMin = session.pwrMin === null ? trk.pwr : Math.min(session.pwrMin, trk.pwr);
+  }
+}
+
+/* Bottom status slot text + role: turbo timer in the pits, else readiness */
+function statusText(now) {
+  if (trk.idleSince !== null && trk.turboNeed > 0) {
+    const t = now - trk.idleSince;
+    if (t >= TURBO_IDLE_MS) {
+      const left = Math.ceil((trk.turboNeed - t) / 1000);
+      if (left > 0) return ["TURBO " + left, "secondary"];
+      if (t - trk.turboNeed < TURBO_OK_MS) return ["TURBO OK", "go"];
+    }
+  }
+  if (trk.state === "READY" && trk.low) return ["PWR LOW", "caution"];
+  return [trk.state, trk.state === "READY" ? "go" : "caution"];   // COLD, WARMING, COOL DOWN: go easy
+}
+
+/* ================================================================
+ * Rendering — 466x466 framebuffer, round panel
+ * ================================================================ */
+const W = 466, C = W / 2;
+const PAGES = ["TACH", "BOOST", "ENGINE", "TEMPS", "TIRES", "SESSION"];
+let page = 0;
+
+function rgba(hex, a) {
+  const n = parseInt(hex.slice(1), 16);
+  return `rgba(${n >> 16},${(n >> 8) & 255},${n & 255},${a})`;
+}
+
+/* Theme: retro amber, "restomod". Every draw call asks for a role, never a
+ * raw color. Few colors, each from a real display of the era, on a #000
+ * face (pixels off on the AMOLED); values in OKLCH (lightness chroma hue):
+ *   AMBER  .81 .17 76  the instrument: primary values, rings, accent (590 nm LED / VFD)
+ *   BONE   .85 .03 81  secondary values: a warm white, like legends printed on the glass
+ *   LEGEND .62 .05 78  labels and units (FAINT .50 for the least important)
+ * and three signals. Everything else is warm, so GO, the one cool color,
+ * always stands out; the warm signals step down in hue and lightness from
+ * amber, so the nearer to red, the nearer to trouble:
+ *   GO      .86 .20 155  VFD phosphor green: in range, ready, on target
+ *   CAUTION .73 .18 51   neon orange: look soon (near a limit, low, lean, knock, not warm yet)
+ *   WARN    .63 .24 27   signal red: act now. Warnings, and the shift light
+ * PEAK is the hottest tint of amber (.93 .04 85): the peak-hold marker and value.
+ * Not yet at temperature has no color of its own: it shows in the
+ * element's neutral color until it comes into range (green). */
+const PAL = {
+  amber: "#ffb000", bone: "#d8ccb8", legend: "#978364", faint: "#70614a",
+  go: "#35f695", caution: "#ff7f16", warn: "#f9262a", peak: "#f4e6ca",
+};
+const THEME = {
+  bg: "#000", ghost: rgba(PAL.amber, 0.075), ringGhost: rgba(PAL.amber, 0.075), warnGhost: rgba(PAL.warn, 0.075),
+  hero: PAL.amber, accent: PAL.amber, secondary: PAL.bone, label: PAL.legend, faint: PAL.faint,
+  dim: rgba(PAL.amber, 0.4), stale: rgba(PAL.amber, 0.5), rule: rgba(PAL.amber, 0.18),
+  go: PAL.go, caution: PAL.caution, warn: PAL.warn, peak: PAL.peak,
+  dotOn: rgba(PAL.amber, 0.8), dotOff: rgba(PAL.amber, 0.18), onAccent: "#000",
+};
+const T = () => THEME;
+
+/* Role color adjusted for staleness: fresh -> role, dim (>1 s) -> T.dim, stale -> null */
+const vcol = (role, f) => f >= 1 ? T()[role] : f > 0 ? T().dim : null;
+
+const cv = document.getElementById("cv");
+const ctx = cv.getContext("2d");
+
+/* Count digit cells (DSEG '.' and ':' are zero-width) */
+const cells = s => s.replace(/[.:]/g, "").length;
+/* Left-pad with DSEG blank cell '!' so value aligns with its ghost */
+function padTo(s, ghost) {
+  while (cells(s) < cells(ghost)) s = "!" + s;
+  return s;
+}
+
+/* Segment text: ghost (all segments, unlit) then the value on top.
+ * color null = stale: dashes. lit = light the ghost itself. skew leans the
+ * cells forward about the baseline (x shifts by skew per px of height). */
+function seg(text, ghost, x, y, size, { font = "DSEG7", weight = 700, align = "center", color = T().hero, ghostColor = T().ghost, lit = false, skew = 0 } = {}) {
+  if (skew) {
+    ctx.save(); ctx.translate(x, y); ctx.transform(1, 0, -skew, 1, 0, 0);
+    seg(text, ghost, 0, 0, size, { font, weight, align, color, ghostColor, lit });
+    ctx.restore();
+    return;
+  }
+  ctx.font = `${weight} ${size}px ${font}`;
+  ctx.textAlign = align;
+  ctx.textBaseline = "alphabetic";
+  ctx.fillStyle = lit ? color : ghostColor;
+  ctx.fillText(ghost, x, y);
+  if (lit) return;
+  if (color === null) {
+    ctx.fillStyle = T().stale; ctx.fillText(ghost.replace(/8/g, "-"), x, y);
+    return;
+  }
+  if (text != null) { ctx.fillStyle = color; ctx.fillText(padTo(text, ghost), x, y); }
+}
+/* Plain label in 14-segment, no ghost */
+function label(text, x, y, size, { color = T().label, align = "center", weight = 400 } = {}) {
+  ctx.font = `${weight} ${size}px DSEG14`;
+  ctx.textAlign = align; ctx.textBaseline = "alphabetic";
+  ctx.fillStyle = color;
+  ctx.fillText(text, x, y);
+}
+/* Degree sign after a right-aligned or measured number: a small ring */
+function degSign(x, y, size, color = T().label) {
+  ctx.strokeStyle = color; ctx.lineWidth = Math.max(1.5, size * 0.12);
+  ctx.beginPath(); ctx.arc(x, y - size * 0.82, size * 0.17, 0, Math.PI * 2); ctx.stroke();
+}
+/* The temperature unit: a degree ring and C or F (units) */
+function degC(x, y, size, color = T().label) {
+  ctx.strokeStyle = color; ctx.lineWidth = Math.max(1.5, size * 0.12);
+  ctx.beginPath(); ctx.arc(x, y - size * 0.82, size * 0.17, 0, Math.PI * 2); ctx.stroke();
+  label(units.f ? "F" : "C", x + size * 0.3, y, size, { color, align: "left" });
+}
+
+/* Segmented arc. a0/a1 in degrees (canvas: 0 = 3 o'clock, clockwise).
+ * litFn(i) returns a fill color for a lit segment, or false for unlit. */
+function ring({ r0, r1, a0, a1, n, gap = 0.9, litFn, ghost = T().ringGhost }) {
+  const step = (a1 - a0) / n;
+  for (let i = 0; i < n; i++) {
+    const s = (a0 + i * step + Math.sign(step) * gap / 2) * Math.PI / 180;
+    const e = (a0 + (i + 1) * step - Math.sign(step) * gap / 2) * Math.PI / 180;
+    const ccw = step < 0;
+    const lit = litFn(i);
+    ctx.beginPath();
+    ctx.arc(C, C, r1, s, e, ccw);
+    ctx.arc(C, C, r0, e, s, !ccw);
+    ctx.closePath();
+    ctx.fillStyle = lit || ghost;
+    ctx.fill();
+  }
+}
+
+function fmt(v, decimals, signed) {
+  let s = Math.abs(v).toFixed(decimals);
+  if (signed && v < 0 && Number(s) !== 0) s = "-" + s;
+  return s;
+}
+
+/* ---------------- units ---------------- */
+/* One choice, three presets (settings screen 3), not a setting per value:
+ * METRIC km/h, bar, C; IMPERIAL mph, psi, F (what US owners expect; the
+ * name car menus use); UK mph, psi, C (the mile is the same in both). Everything inside stays metric (limits, learning, trends,
+ * the arcs' scales); only what is drawn converts. Pressures: bar with two
+ * decimals (1.23), psi with one (17.8), the same number of digit cells;
+ * oil pressure 4.2 bar or 61 psi. Temperatures in F need a third digit
+ * where C has two (the intake temps). */
+const UNIT_SETS = [
+  { name: "METRIC", mph: false, psi: false, f: false },
+  { name: "IMPERIAL", mph: true, psi: true, f: true },
+  { name: "UK", mph: true, psi: true, f: false },
+];
+let units = UNIT_SETS[0];
+function setUnits(i) {
+  units = UNIT_SETS[(i + UNIT_SETS.length) % UNIT_SETS.length];
+  try { localStorage.setItem("grg-units", UNIT_SETS.indexOf(units)); } catch {}
+}
+const KPH_PER_MPH = 1.609344, PSI_PER_BAR = 14.5038;
+const uSpeed = kph => units.mph ? kph / KPH_PER_MPH : kph;
+const uTemp = c => units.f ? c * 9 / 5 + 32 : c;
+const speedUnit = () => units.mph ? "MPH" : "KM/H";
+const pressUnit = () => units.psi ? "PSI" : "BAR";
+const pressText = (bar, signed = false) => units.psi ? fmt(bar * PSI_PER_BAR, 1, signed) : fmt(bar, 2, signed);
+const pressGhost = () => units.psi ? "88.8" : "8.88";
+/* a tire target: in psi rounded to its 0.5 step (2.20 bar shows 32.0) */
+const targetText = bar => units.psi ? (Math.round(bar * PSI_PER_BAR / TGT_STEP_PSI) * TGT_STEP_PSI).toFixed(1) : bar.toFixed(2);
+const tempText = c => String(Math.round(uTemp(c)));
+
+/* ---------------- page: BOOST ---------------- */
+const B_MIN = -0.5, B_SEGS = 42;
+const SHIFT_BLINK_MS = 80;   // shift light: on/off every 80 ms above the shift point
+/* Shift point: SHIFT_RPM, fixed (not a setting): the G16E's rated peak
+ * power, until pulls logged in the car show where the next gear pulls
+ * harder (docs/car-session.md). While the oil warms up the gauge asks for
+ * earlier shifts, like a BMW M's warm-up tach: WARM_RPM with the oil at
+ * WARM_OIL or colder, rising in 250 rpm steps to SHIFT_RPM at READY_OIL.
+ * Oil temp unknown: SHIFT_RPM (no guessing). */
+const SHIFT_RPM = 6500;
+const WARM_RPM = 4500, WARM_OIL = 40, WARM_STEP = 250;
+function shiftAt(now) {
+  if (fresh(ch.oil, now) === 0 || ch.oil.v >= READY_OIL) return SHIFT_RPM;
+  const u = Math.max(0, (ch.oil.v - WARM_OIL) / (READY_OIL - WARM_OIL));
+  return Math.min(SHIFT_RPM, Math.round((WARM_RPM + u * (SHIFT_RPM - WARM_RPM)) / WARM_STEP) * WARM_STEP);
+}
+/* Boost scale: 2.0 bar, room for a stock car of either generation (HKS
+ * dyno: Gen 1 148 kPa ~1.5 bar, Gen 2 167 kPa ~1.7 bar). Not a setting: a
+ * tuned car widens it by itself. Fresh boost held over 95 % of the scale
+ * for BMAX_HOLD_MS (one stray reading can't) moves it to the next step,
+ * remembered across power cycles; it never narrows by itself. The 1-byte
+ * MAP PID pins at 1.54 bar, so this only happens on a car that answers the
+ * wide-range PID. */
+const BMAX_STEPS = [2.0, 2.5, 3.0], BMAX_HOLD_MS = 300;
+let bmax = BMAX_STEPS[0], bmaxSince = null;
+function boostScaleStep(now) {
+  const i = BMAX_STEPS.indexOf(bmax);
+  const high = i >= 0 && i < BMAX_STEPS.length - 1 && fresh(ch.boost, now) >= 1 && !ch.boost.over && ch.boost.v > bmax * 0.95;
+  if (!high) { bmaxSince = null; return; }
+  bmaxSince ??= now;
+  if (now - bmaxSince < BMAX_HOLD_MS) return;
+  bmax = BMAX_STEPS[i + 1];
+  bmaxSince = null;
+  try { localStorage.setItem("grg-bmax", bmax); } catch {}
+}
+/* Every segmented ring (boost, temp arcs, takeover) shares this geometry:
+ * same band, same segment pitch (270/42 deg), same gap. */
+const RING_R0 = 196, RING_R1 = 224, RING_GAP = 0.9;
+const RING_PITCH = 270 / B_SEGS;
+/* Boost scale, split at zero like a mechanical boost gauge: vacuum
+ * (B_MIN..0) gets the first B_VAC_SEGS segments, so zero sits at 9 o'clock
+ * (135 + 7 * 270/42 = 180 deg), and boost (0..bmax) the other 35, where the
+ * resolution matters. bPos: value -> position in segments. */
+const B_VAC_SEGS = 7;
+const bPos = v => v < 0 ? (v - B_MIN) / -B_MIN * B_VAC_SEGS : B_VAC_SEGS + v / bmax * (B_SEGS - B_VAC_SEGS);
+const bIdx = v => Math.round(bPos(v));
+
+/* Split rings: the boost ring's 42 slots cut into arcs, so every arc keeps
+ * the shared geometry. Halves are 20 slots with a 2-slot gap at 12 o'clock;
+ * quarters are 9 slots with 2-slot gaps at 12 o'clock and on either side.
+ * Every arc fills from its bottom end up (left arcs clockwise, right arcs
+ * counter-clockwise); s0 is the slot at the bottom end. */
+const ARC = {
+  l:  { s0: 0,  n: 20, dir: 1 },  r:  { s0: 41, n: 20, dir: -1 },
+  ll: { s0: 0,  n: 9,  dir: 1 },  ul: { s0: 11, n: 9,  dir: 1 },
+  ur: { s0: 30, n: 9,  dir: -1 }, lr: { s0: 41, n: 9,  dir: -1 },
+};
+function arcSpan(a) {                     // [bottom end, top end], degrees
+  const a0 = 135 + (a.dir > 0 ? a.s0 : a.s0 + 1) * RING_PITCH;
+  return [a0, a0 + a.dir * a.n * RING_PITCH];
+}
+/* litFn(i): i = 0 is the bottom segment */
+function splitArc(a, litFn) {
+  const [a0, a1] = arcSpan(a);
+  ring({ r0: RING_R0, r1: RING_R1, a0, a1, n: a.n, gap: RING_GAP, litFn });
+}
+/* Segments lit for v on lo..hi */
+const arcIdx = (a, v, lo, hi) => Math.round(Math.max(0, Math.min(1, (v - lo) / (hi - lo))) * a.n);
+/* The boost page's learned-boost tick, just outside the ring */
+const TICK_R0 = 228, TICK_R1 = 231;
+let peak = { v: -1, ts: 0, over: false };
+/* Intake temperature trends (boost and session pages): is the heat soak
+ * building or clearing? A sample a second, compared over two windows:
+ *   fast: the last 5 s against the 5 s ten seconds earlier, for driving:
+ *         an attack or a cool-down lap turns the arrow within seconds;
+ *   slow: the last 10 s against the 10 s 90 s earlier, for the pits: a
+ *         soak creeping up a degree a minute.
+ * Averages, not single samples: the car reports whole degrees, and a
+ * reading hovering between two numbers must not flicker the arrow. A
+ * window that moved TREND_ON lights it (the fast one wins, so it turns at
+ * once); it goes off once neither window still shows TREND_OFF that way.
+ * A stale value or a gap starts over. Tracked whatever page is showing,
+ * like the peak hold. */
+const TREND_FAST = { back: 10, k: 5 }, TREND_SLOW = { back: 90, k: 10 };
+const TREND_N = 100, TREND_ON = 1.0, TREND_OFF = 0.5;
+const trend = { iat: { v: [], at: -1e9, dir: 0 }, cact: { v: [], at: -1e9, dir: 0 } };
+/* the change between the newest k samples and the k samples `back` earlier; 0 until there are enough */
+function trendDelta(v, { back, k }) {
+  if (v.length < back + k) return 0;
+  let d = 0;
+  for (let i = 0; i < k; i++) d += v[v.length - 1 - i] - v[v.length - 1 - back - i];
+  return d / k;
+}
+function trendUpdate(now) {
+  for (const key of ["iat", "cact"]) {
+    const t = trend[key], c = ch[key];
+    if (now - t.at < 1000) continue;
+    if (now - t.at > 3000) t.v = [];
+    t.at = now;
+    if (fresh(c, now) < 1) { t.v = []; t.dir = 0; continue; }
+    t.v.push(c.v);
+    if (t.v.length > TREND_N) t.v.shift();
+    const fast = trendDelta(t.v, TREND_FAST), slow = trendDelta(t.v, TREND_SLOW);
+    const on = Math.abs(fast) >= TREND_ON ? Math.sign(fast) : Math.abs(slow) >= TREND_ON ? Math.sign(slow) : 0;
+    if (on) t.dir = on;
+    else if (t.dir * fast < TREND_OFF && t.dir * slow < TREND_OFF) t.dir = 0;
+  }
+}
+/* Trend annunciator: an up and a down wedge of three bars each (like the
+ * tach's shift ladder), ghosted; dir lights one in the number's color.
+ * (x, y) = center; bars w, 2w, 3w wide and h tall, 2 px apart, the two
+ * wedges sep apart. TR_BIG next to 50 px numbers, TR_SMALL next to 34 px. */
+const TR_BIG = { w: 8, h: 5, sep: 6 }, TR_SMALL = { w: 6, h: 3, sep: 4 };
+function trendMark(x, y, dir, color, { w, h, sep } = TR_BIG) {
+  const up0 = y - sep / 2 - 3 * h - 4, dn0 = y + sep / 2;
+  for (let i = 0; i < 3; i++) {
+    const wu = w * (i + 1), wd = w * (3 - i);
+    ctx.fillStyle = dir > 0 && color ? color : T().ghost;
+    ctx.fillRect(x - wu / 2, up0 + i * (h + 2), wu, h);
+    ctx.fillStyle = dir < 0 && color ? color : T().ghost;
+    ctx.fillRect(x - wd / 2, dn0 + i * (h + 2), wd, h);
+  }
+}
+/* Peak hold, 5 s; tracked every frame whatever page is showing (as the gauge firmware) */
+function peakUpdate(now) {
+  const fb = fresh(ch.boost, now), v = ch.boost.v ?? 0;
+  const over = !!ch.boost.over;
+  if (fb && (v > peak.v || (over && v >= peak.v))) peak = { v, ts: now, over };
+  if (now - peak.ts > 5000) peak = { v: fb ? v : -1, ts: now, over: !!fb && over };
+}
+
+/* Scale numerals inside the boost ring: -.5, 0, then every 0.5 bar up to
+ * 2.0, or every bar above; in psi 0, then every 5 psi on the 2.0 bar (29
+ * psi) ring, every 10 on the wider ones, and no vacuum numeral (-5 psi
+ * would sit on the IAT number; zero at 9 o'clock is the reference) */
+function drawScaleMarks() {
+  const marks = [];
+  if (units.psi) {
+    const top = bmax * PSI_PER_BAR, step = top < 30 ? 5 : 10;
+    marks.push([0, "0"]);
+    for (let p = step; p <= top + 0.01; p += step) marks.push([p / PSI_PER_BAR, String(p)]);
+  } else {
+    const step = bmax <= 2.0 ? 0.5 : 1.0;
+    marks.push([-0.5, "-.5"], [0, "0"]);
+    for (let val = step; val <= bmax + 0.01; val += step) marks.push([val, val === 0.5 ? ".5" : val.toFixed(1)]);
+  }
+  for (const [val, txt] of marks) {
+    const a = (135 + bPos(val) * RING_PITCH) * Math.PI / 180;
+    const x = C + Math.cos(a) * 170, y = C + Math.sin(a) * 170 + 10;
+    ctx.font = "400 20px DSEG7"; ctx.textAlign = "center";
+    ctx.fillStyle = T().faint; ctx.fillText(txt, x, y);
+  }
+}
+
+/* The learned full-throttle boost for the current gear and rpm bin, or null */
+function learnedNow(now) {
+  if (!freshAll(now, ch.rpm, ch.gear)) return null;
+  const g = ch.gear.v, rpm = ch.rpm.v;
+  if (g < 1 || g > PWR_GEARS || rpm < PWR_RPM_MIN || rpm >= PWR_RPM_MAX) return null;
+  return pwrBase[g - 1][Math.floor((rpm - PWR_RPM_MIN) / PWR_BIN)];
+}
+
+/* Boost and what heat soak does to it: the GR Yaris soaks its intake when
+ * parked, and hot intake air costs boost and power on the next run. Boost
+ * on the ring and big in the middle; under it the intake temps, IAT (into
+ * the engine) and CACT (charge air at the cooler), each in the column on
+ * its side, orange over their caution levels (50 and 60 C), with a trend
+ * right after each (rising / falling: is the soak clearing?);
+ * peak boost and PWR (the power the car makes now) at the bottom. */
+/* the readout sits a little left of center: clear of the top-right scale
+ * numeral on every scale (2.0 on the 3.0 bar ring) */
+const BST_X = C - 8, BST_Y = 222, INTAKE_Y = 340;
+/* The intake pair: two digit cells at 50 px in C; in F three, at 42 px so
+ * the pair still fits inside the ring (a cell is 0.816 of the size). Trend
+ * center: half the number, 6 px, half the trend. */
+const INTAKE_C = { size: 50, ghost: "88", iat: C - 110, cact: C + 50, dx: 59 };
+const INTAKE_F = { size: 42, ghost: "888", iat: C - 90, cact: C + 60, dx: 70 };
+function drawBoost(now) {
+  const fb = fresh(ch.boost, now);
+  const v = ch.boost.v ?? 0;
+  const over = fb > 0 && ch.boost.over;     // pinned at the PID's limit: at least v
+
+  // ring lights from the zero point toward the value (vacuum lights backwards)
+  const zero = bIdx(0), cur = bIdx(v), pk = bIdx(peak.v);
+  const lo = Math.min(zero, cur), hi = Math.max(zero, cur);
+  ring({
+    r0: RING_R0, r1: RING_R1, a0: 135, a1: 405, n: B_SEGS, gap: RING_GAP,
+    litFn: i => {
+      if (!fb) return false;
+      if (i >= lo && i < hi) return vcol("accent", fb);
+      if (peak.v > 0.05 && i === pk - 1 && pk > zero) return T().peak;
+      return false;
+    },
+  });
+  // what full throttle gives here (learned for this gear and rpm): a tick just outside the ring
+  const ln = learnedNow(now);
+  if (ln !== null && ln > 0) {
+    const k = Math.max(1, Math.min(B_SEGS, bIdx(ln)));
+    ring({ r0: TICK_R0, r1: TICK_R1, a0: 135 + (k - 1) * RING_PITCH, a1: 135 + k * RING_PITCH, n: 1, gap: 0, litFn: () => T().secondary });
+  }
+  drawScaleMarks();
+
+  // over range: the real boost is higher than the PID can say; the floor in caution, OVER for the unit
+  seg(fb ? pressText(v, true) : null, units.psi ? "88.8" : "88.88", BST_X, BST_Y, 84, { color: over ? T().caution : vcol("hero", fb) });
+  label(over ? "OVER" : pressUnit(), BST_X + 132, BST_Y + 30, 20, { color: over ? T().caution : T().faint, align: "right" });
+
+  // intake temps, the heat-soak pair: two-digit cells (intake air never
+  // gets to 100 C), clear of the scale numerals; each trend right after its
+  // number, like a unit; the pair sits left of center so CACT's trend
+  // clears the 1.5 numeral; the unit once, between the labels
+  const L = units.f ? INTAKE_F : INTAKE_C;
+  const ci = tempField("IAT", ch.iat, now, L.iat, INTAKE_Y, L.size, { role: "secondary", cautionAt: 50, ghost: L.ghost });
+  const cc = tempField("CACT", ch.cact, now, L.cact, INTAKE_Y, L.size, { role: "secondary", cautionAt: 60, ghost: L.ghost });
+  degC((L.iat + L.cact) / 2 - 8, INTAKE_Y - L.size - 8, 20, T().faint);
+  trendMark(L.iat + L.dx, INTAKE_Y - L.size / 2 + 1, trend.iat.dir, ci);
+  trendMark(L.cact + L.dx, INTAKE_Y - L.size / 2 + 1, trend.cact.dir, cc);
+
+  if (peak.v > 0.05) {
+    label("PK", C - 80, 394, 20, { color: T().faint, align: "right" });
+    seg(pressText(peak.v), pressGhost(), C - 74, 394, 20, { color: peak.over ? T().caution : T().peak, align: "left", weight: 400 });
+  }
+  // full power, from the last wide-open-throttle sample; dims after 30 s, dashes while learning
+  label("PWR", C + 34, 394, 20, { color: T().faint, align: "right" });
+  const pf = trk.pwr === null ? 0 : now - trk.pwrTs < 30000 ? 1 : 0.5;
+  seg(trk.pwr === null ? null : String(Math.round(trk.pwr)), "888", C + 40, 394, 20,
+      { color: vcol(trk.low ? "caution" : "go", pf), align: "left", weight: 400 });
+}
+
+/* ---------------- page: TACH ---------------- */
+/* The driver's page: rpm, gear, speed and nothing else. The ring is the
+ * tachometer, 0-7000 rpm on the shared 42 slots (1000 rpm every 6), with
+ * the redline printed on the dial in red ghost from the shift point. Speed
+ * is the hero, big and centered; the gear sits under it in its box
+ * (7-segment digits; neutral a 14-segment N over its own ghost: seven
+ * segments can't draw one); no rpm
+ * digits (the ring is the rpm); the numerals lean forward like an 80s
+ * digital dash.
+ * Either side of the box a shift ladder: three bars a side light in
+ * caution, bottom up, as the rpm closes on the shift point (look soon).
+ * Past it, the shift light: ring, box and ladder blink red as one (act
+ * now). The redline and the ladder follow shiftAt(), so
+ * they start lower while the oil warms up. */
+const TACH_MAX = 7000, TACH_STEP = TACH_MAX / B_SEGS;     // 166.7 rpm per segment
+const TACH_SKEW = 0.12;
+                                   // forward lean of the big numerals, ~7 deg
+const tIdx = rpm => Math.max(0, Math.min(B_SEGS, Math.round(rpm / TACH_STEP)));
+const GEAR_BOX = { x: C - 42, y: 258, w: 84, h: 100 };
+/* Shift ladder: rung k (0 = bottom) lights LADDER_RPM * (3 - k) below the
+ * shift point; bars run outward from the box (gap 12), longer the higher
+ * the rung, so the lit ladder is a wedge */
+const LADDER_RPM = 450;
+const ladderAt = (shiftRpm, k) => shiftRpm - LADDER_RPM * (3 - k);
+const LADDER = [{ y: GEAR_BOX.y + 75, len: 30 }, { y: GEAR_BOX.y + 44, len: 46 }, { y: GEAR_BOX.y + 13, len: 62 }];
+const LADDER_H = 12, LADDER_GAP = 12;
+function drawTach(now) {
+  const fr = fresh(ch.rpm, now), fg = fresh(ch.gear, now), fs = fresh(ch.speed, now);
+  const rpm = ch.rpm.v ?? 0;
+  const sp = shiftAt(now), red = Math.floor(sp / TACH_STEP);   // first redline slot (39 at 6500)
+  const shifting = fr > 0 && rpm > sp;
+  const shift = shifting && Math.floor(now / SHIFT_BLINK_MS) % 2 === 0;
+  const cur = fr ? tIdx(rpm) : 0;
+  ring({
+    r0: RING_R0, r1: RING_R1, a0: 135, a1: 405, n: B_SEGS, gap: RING_GAP,
+    litFn: i => {
+      if (shifting) return shift ? T().warn : i >= red && T().warnGhost;
+      if (i < cur) return vcol("accent", fr);
+      return i >= red && T().warnGhost;                // the redline, printed on the dial
+    },
+  });
+  drawTachMarks();
+
+  drawLadder(k => shifting ? shift && T().warn : fr >= 1 && rpm >= ladderAt(sp, k) && T().caution,
+             shifting ? T().warnGhost : T().ghost);
+  const b = GEAR_BOX;
+  ctx.lineWidth = 2; ctx.strokeStyle = T().label;
+  if (shift) { ctx.fillStyle = T().warn; ctx.fillRect(b.x, b.y, b.w, b.h); }
+  else ctx.strokeRect(b.x, b.y, b.w, b.h);
+  const neutral = fg && ch.gear.v === 0;
+  seg(fg ? (neutral ? "N" : String(ch.gear.v)) : null, neutral ? "~" : "8", TACH_GEAR_X, TACH_GEAR_Y, TACH_GEAR_SIZE, {
+    skew: TACH_SKEW, font: neutral ? "DSEG14" : "DSEG7",
+    color: shift ? T().onAccent : vcol("secondary", fg),
+    ghostColor: shift ? T().warn : T().ghost,
+  });
+
+  seg(fs ? String(Math.round(uSpeed(ch.speed.v))) : null, "888", TACH_SPD_X, TACH_SPD_Y, TACH_SPD_SIZE, { color: vcol("hero", fs), skew: TACH_SKEW });
+  label(speedUnit(), C, TACH_SPD_Y + 32, 20, { color: T().faint });
+}
+/* Sizes and anchors of the leaning numerals, nudged left so the slanted glyphs sit centered */
+const TACH_SPD_SIZE = 104, TACH_GEAR_SIZE = 80;
+const TACH_SPD_X = C - 5, TACH_SPD_Y = 212, TACH_GEAR_X = C - 5, TACH_GEAR_Y = GEAR_BOX.y + 89;
+/* Scale numerals 1..7 (x1000 rpm) inside the ring; no 0, it would crowd the speed */
+function drawTachMarks() {
+  ctx.font = "400 20px DSEG7"; ctx.textAlign = "center"; ctx.fillStyle = T().faint;
+  for (let k = 1; k <= TACH_MAX / 1000; k++) {
+    const a = (135 + k * 6 * RING_PITCH) * Math.PI / 180;
+    ctx.fillText(String(k), C + Math.cos(a) * 170, C + Math.sin(a) * 170 + 10);
+  }
+}
+/* The shift ladder; litFn(k) returns a color for a lit rung, or false */
+function drawLadder(litFn, ghost) {
+  const b = GEAR_BOX;
+  LADDER.forEach((r, k) => {
+    ctx.fillStyle = litFn(k) || ghost;
+    ctx.fillRect(b.x - LADDER_GAP - r.len, r.y, r.len, LADDER_H);
+    ctx.fillRect(b.x + b.w + LADDER_GAP, r.y, r.len, LADDER_H);
+  });
+}
+
+/* ---------------- page: ENGINE ---------------- */
+/* Is the engine healthy under load? Lambda (wideband) on the left half
+ * ring, oil pressure on the right; each number sits in the column next to
+ * its arc. Timing and knock correction below, degrees (the sign is on the
+ * label, clear of the ring). */
+const LAM_LO = 0.7, LAM_HI = 1.1, OILP_HI = 7, AFR_STOICH = 14.7;
+const KNOCK_CAUTION = -1;
+const COL = 90;                     // column offset from the center, every two-column page
+function drawEngine(now) {
+  const fl = fresh(ch.lam, now), fo = fresh(ch.oilp, now), fr = fresh(ch.rpm, now);
+  const fi = fresh(ch.ign, now), fk = fresh(ch.knock, now);
+  const L = C - COL, R = C + COL;
+
+  // lambda: accent, caution when lean under boost
+  const lr = lamLean(now) ? "caution" : "accent";
+  const li = fl ? arcIdx(ARC.l, ch.lam.v, LAM_LO, LAM_HI) : 0;
+  splitArc(ARC.l, i => i < li && vcol(lr, fl));
+  label("LAMBDA", L, 128, 20);
+  seg(fl ? ch.lam.v.toFixed(2) : null, "8.88", L, 186, 50, { color: vcol(lamLean(now) ? "caution" : "hero", fl) });
+  if (fl) label("AFR " + (ch.lam.v * AFR_STOICH).toFixed(1), L, 222, 20, { color: T().faint });
+
+  // oil pressure: in range (green), caution within 0.5 bar of the rpm minimum, warn while its warning is active
+  const running = fr && ch.rpm.v >= OILP_RUN_RPM, min = running ? oilpMin(ch.rpm.v) : 0;
+  const or = warnState.oilp.active ? "warn" : running && ch.oilp.v < min + 0.5 ? "caution" : "go";
+  const oi = fo ? arcIdx(ARC.r, ch.oilp.v, 0, OILP_HI) : 0;
+  splitArc(ARC.r, i => i < oi && vcol(or, fo));
+  label("OIL P", R, 128, 20);
+  seg(fo ? (units.psi ? String(Math.round(ch.oilp.v * PSI_PER_BAR)) : ch.oilp.v.toFixed(1)) : null,
+      units.psi ? "88" : "8.8", R, 186, 50, { color: vcol(or === "go" ? "hero" : or, fo) });
+  label(pressUnit(), R, 222, 20, { color: T().faint });
+
+  // ignition timing and knock correction, degrees
+  labelDeg("IGN", L, 294);
+  seg(fi ? String(Math.round(ch.ign.v)) : null, "88", L, 352, 50, { color: vcol("secondary", fi) });
+  labelDeg("KNOCK", R, 294);
+  const kr = !fk ? "dim" : ch.knock.v <= KNOCK_CAUTION ? "caution" : "secondary";
+  seg(fk ? fmt(ch.knock.v, 1, true) : null, "88.8", R, 352, 50, { color: vcol(kr, fk) });
+}
+/* A centered label with a degree sign after it */
+function labelDeg(text, x, y) {
+  ctx.font = "400 20px DSEG14";
+  const w = ctx.measureText(text).width;
+  label(text, x - 7, y, 20);
+  degSign(x - 7 + w / 2 + 9, y, 20);
+}
+
+/* ---------------- page: TEMPS ---------------- */
+/* Zone -> role: warn over the limit, caution within 10 of it, go in range;
+ * below operating temperature the arc's neutral color */
+function zone(v, coldBelow, warnAt) {
+  if (v > warnAt) return "warn";
+  if (v > warnAt - 10) return "caution";
+  if (v < coldBelow) return "accent";
+  return "go";
+}
+
+/* A temperature on a quarter arc. warnAt: zones up to red (a warning behind
+ * it). cautionAt instead: no warning, so it tops out at caution. */
+function tempArc(a, c, now, lo, hi, coldBelow, { warnAt = null, cautionAt = null }) {
+  const f = fresh(c, now), idx = f ? arcIdx(a, c.v, lo, hi) : 0;
+  const role = !f ? "dim" : warnAt !== null ? zone(c.v, coldBelow, warnAt)
+             : c.v > cautionAt ? "caution" : c.v < coldBelow ? "accent" : "go";
+  splitArc(a, i => i < idx && vcol(role, f));
+}
+
+function tempField(name, c, now, x, y, size, { role = "hero", cautionAt = Infinity, warnKey = null, ghost = "888" } = {}) {
+  const f = fresh(c, now);
+  label(name, x, y - size - 8, 20);        // nearer its own number than the row above
+  let r = role;
+  if (warnKey && warnState[warnKey].active) r = "warn";
+  else if (c.v > cautionAt) r = "caution";
+  seg(f ? tempText(c.v) : null, ghost, x, y, size, { color: vcol(r, f) });
+  return vcol(r, f);
+}
+
+/* Will the car last the session? Four quarter arcs, each number in the
+ * column next to its own arc: water and oil on top (they end a session),
+ * gearbox and the rear diff clutch (the GR-Four coupling) below. The
+ * intake temps (heat soak) are on the boost page. */
+const GBOX_CAUTION = 110, RDIFF_CAUTION = 120;
+const TEMP_Y = [206, 336];
+function drawTemps(now) {
+  tempArc(ARC.ul, ch.coolant, now, 40, 120, 70, { warnAt: 110 });
+  tempArc(ARC.ur, ch.oil, now, 40, 150, 80, { warnAt: 130 });
+  tempArc(ARC.ll, ch.gbox, now, 40, 140, 40, { cautionAt: GBOX_CAUTION });
+  tempArc(ARC.lr, ch.rdiff, now, 40, 150, 40, { cautionAt: RDIFF_CAUTION });
+
+  degC(C - 8, 96, 20, T().faint);                         // unit, once, in the free space at the top
+  const L = C - COL, R = C + COL;
+  tempField("WATER", ch.coolant, now, L, TEMP_Y[0], 50, { warnKey: "coolant" });
+  tempField("OIL", ch.oil, now, R, TEMP_Y[0], 50, { warnKey: "oil" });
+  tempField("GEARBOX", ch.gbox, now, L, TEMP_Y[1], 50, { role: "secondary", cautionAt: GBOX_CAUTION });
+  tempField("DIFF CLUTCH", ch.rdiff, now, R, TEMP_Y[1], 50, { role: "secondary", cautionAt: RDIFF_CAUTION });
+}
+
+/* ---------------- page: TIRES ---------------- */
+/* Corners as seen from the driver's seat, each on its own quarter arc:
+ * FL FR / RL RR. Pressure (bar, hot) is the hero; TPMS air temp under it.
+ * The arc fills with the pressure on TP_LO..TP_HI in the pressure's color. */
+const TIRE_LOW_BAR = 2.0, TIRE_WARN_BAR = 1.6, TP_LO = 1.2, TP_HI = 3.2, TIRE_HOT = 70;
+/* Below TIRE_LOW_BAR is caution only once the tire's air is at TIRE_WARM:
+ * cold tires sit under their hot pressure on every start. Under
+ * TIRE_WARN_BAR is a warning at any temperature; no air temp counts as warm. */
+const TIRE_WARM = 40;
+const TIRE_ARC = { fl: ARC.ul, fr: ARC.ur, rl: ARC.ll, rr: ARC.lr };
+const TIRE_POS = { fl: [C - COL, 180], fr: [C + COL, 180], rl: [C - COL, 318], rr: [C + COL, 318] };
+
+/* Driving: live pressure, green from the axle's hot target (less
+ * TGT_WINDOW) up to TGT_OVER times it, red past that (low-pressure
+ * caution/warning win below), TPMS air temp under it.
+ * Parked after a run: PIT ADVICE, the hot pressure captured when the car
+ * stopped and the change to make (BLEED / ADD), in 0.05 bar steps. */
+const TGT_WINDOW = 0.05, TGT_OVER = 1.25;   // green from target - 0.05 to +25 %; red past that
+function drawTires(now) {
+  const pitMode = pitAdvice(now);
+  if (pitMode) label("PIT ADVICE", C, 92, 20, { color: T().secondary });
+  ctx.fillStyle = T().rule;
+  ctx.fillRect(C - 150, 249, 300, 1.5);
+  ctx.fillRect(C - 0.75, 116, 1.5, 262);
+  for (const k of TIRES) {
+    const [x, y] = TIRE_POS[k], a = TIRE_ARC[k], tgt = tireTarget(k);
+    if (pitMode) {
+      const hot = trk.pitTp[k];
+      const step = units.psi ? TGT_STEP_PSI / PSI_PER_BAR : TGT_STEP;     // advice in 0.05 bar or 0.5 psi steps
+      const adv = Math.round((tgt - hot) / step) * step, ok = Math.abs(adv) < step / 2;
+      const idx = arcIdx(a, hot, TP_LO, TP_HI);
+      splitArc(a, i => i < idx && (ok ? T().go : T().accent));
+      seg(pressText(hot), pressGhost(), x, y, 50, { color: T().hero });
+      // words, not a sign: unambiguous for whoever holds the gauge, and DSEG14's
+      // minus is two short bars that read like "--"
+      if (ok) label("OK", x, y + 42, 20, { color: T().go });
+      else label((adv > 0 ? "ADD " : "BLEED ") + pressText(Math.abs(adv)), x, y + 42, 20, { color: T().accent });
+      continue;
+    }
+    const p = ch["tp_" + k], t = ch["tt_" + k];
+    const fp = fresh(p, now), ft = fresh(t, now);
+    const over = p.v > tgt * TGT_OVER + 1e-6, onTgt = p.v >= tgt - TGT_WINDOW - 1e-6;
+    const cold = ft > 0 && t.v < TIRE_WARM;
+    const pr = p.v < TIRE_WARN_BAR ? "warn" : p.v < TIRE_LOW_BAR ? (cold ? "hero" : "caution") : over ? "warn" : onTgt ? "go" : "hero";
+    const idx = fp ? arcIdx(a, p.v, TP_LO, TP_HI) : 0;
+    splitArc(a, i => i < idx && vcol(pr === "hero" ? "accent" : pr, fp));
+    seg(fp ? pressText(p.v) : null, pressGhost(), x, y, 50, { color: vcol(pr, fp) });
+    // tire air temp: the pressure gives the corner its verdict (one state color
+    // per corner); the temp stays neutral and only speaks up when hot, in
+    // caution at most (no warning behind it, red = warnings only)
+    const tr = !ft ? "dim" : t.v >= TIRE_HOT ? "caution" : "secondary";
+    seg(ft ? tempText(t.v) : null, "888", x - 10, y + 42, 34, { color: vcol(tr, ft) });
+    degC(x + 38, y + 42, 20, T().faint);
+  }
+}
+
+/* ---------------- page: SESSION ---------------- */
+/* Peaks since boot. Rows follow the circle: two values in the narrow top
+ * and bottom rows, three in the two middle rows where the panel is widest.
+ * Top: water, oil; then power (peak boost, lowest PWR, most knock retard);
+ * then what went in (IAT, leanest lambda under boost, CACT); bottom: the
+ * driveline. Colors are what the live page would have shown at that value;
+ * red only for a value that went past a warning limit. */
+const SES_SIZE = 34, SES_LBL = 20, SES_Y = [166, 234, 302, 370], SES_X2 = 80, SES_X2B = 90, SES_X3 = 125, SES_TREND_DX = 43;
+/* The intake row: IAT and CACT two cells in C, three in F, each with its
+ * trend; in F the row shifts left so CACT's trend clears the ring */
+const SES_INTAKE_C = { ghost: "88", iat: C - SES_X3, lam: C, cact: C + SES_X3, dx: SES_TREND_DX };
+const SES_INTAKE_F = { ghost: "888", iat: C - 130, lam: C - 6, cact: C + 96, dx: 57 };
+function drawSession(now) {
+  ring({ r0: RING_R0, r1: RING_R1, a0: 135, a1: 405, n: B_SEGS, gap: RING_GAP, litFn: () => false });   // the frame, unlit
+  // time since boot: m:ss for the first hour, then h:mm:ss
+  const secs = Math.max(0, Math.floor((now - session.start) / 1000)), p2 = n => String(n).padStart(2, "0");
+  const [time, ghost] = secs < 3600
+    ? [`${Math.floor(secs / 60)}:${p2(secs % 60)}`, "88:88"]
+    : [`${Math.floor(secs / 3600)}:${p2(Math.floor(secs / 60) % 60)}:${p2(secs % 60)}`, "8:88:88"];
+  // time since boot centered at the top, the header under it
+  seg(time, ghost, C, 62, 20, { color: T().hero, weight: 400 });
+  label("SESSION PEAKS", C, 90, 20, { color: T().secondary });
+  const temp = (v, caution, warn) => v === null ? "hero" : v > warn ? "warn" : v > caution ? "caution" : "hero";
+  const cell = (name, v, txt, ghost, role, x, y) => {
+    label(name, x, y - SES_SIZE - 6, SES_LBL);
+    seg(v === null ? null : txt, ghost, x, y, SES_SIZE, { color: v === null ? null : T()[role] });
+  };
+  const t = k => session[k] === null ? "" : tempText(session[k]);
+  const [y0, y1, y2, y3] = SES_Y;
+  cell("WATER", session.coolant, t("coolant"), "888", temp(session.coolant, 100, 110), C - SES_X2, y0);
+  cell("OIL", session.oil, t("oil"), "888", temp(session.oil, 120, 130), C + SES_X2, y0);
+  // a session peak below zero boost doesn't happen in practice; 0.00 keeps it to three digits
+  cell("BOOST", session.boost, pressText(Math.max(0, session.boost ?? 0)), pressGhost(),
+       session.boostOver ? "caution" : "hero", C - SES_X3, y1);
+  cell("MIN PWR", session.pwrMin, session.pwrMin === null ? "" : String(Math.round(session.pwrMin)), "888",
+       session.pwrMin !== null && session.pwrMin < PWR_LOW_PCT ? "caution" : "go", C, y1);
+  const kn = session.knock;           // most knock retard
+  cell("KNOCK", kn, kn === null ? "" : fmt(kn, 1, true), "88.8",
+       kn === null ? "hero" : kn <= KNOCK_CAUTION ? "caution" : "secondary", C + SES_X3, y1);
+  // the intake pair also shows its live trend (as on the boost page), right
+  // after its number: parked, is the soak still building or clearing? Two
+  // digit cells (intake air never gets to 100 C) make room before the ring.
+  const ri = session.iat > 50 ? "caution" : "secondary", rc = session.cact > 60 ? "caution" : "secondary";
+  const R = units.f ? SES_INTAKE_F : SES_INTAKE_C;
+  cell("IAT", session.iat, t("iat"), R.ghost, ri, R.iat, y2);
+  trendMark(R.iat + R.dx, y2 - 16, trend.iat.dir, T()[ri], TR_SMALL);
+  // leanest lambda under boost, caution if it was lean against commanded
+  cell("LAMBDA", session.lam, session.lam === null ? "" : session.lam.toFixed(2), "8.88", session.lamLean ? "caution" : "secondary", R.lam, y2);
+  cell("CACT", session.cact, t("cact"), R.ghost, rc, R.cact, y2);
+  trendMark(R.cact + R.dx, y2 - 16, trend.cact.dir, T()[rc], TR_SMALL);
+  cell("GEARBOX", session.gbox, t("gbox"), "888", session.gbox > GBOX_CAUTION ? "caution" : "secondary", C - SES_X2B, y3);
+  cell("DIFF CLUTCH", session.rdiff, t("rdiff"), "888", session.rdiff > RDIFF_CAUTION ? "caution" : "secondary", C + SES_X2B, y3);
+}
+
+/* ---------------- READY splash (state changed to READY) ---------------- */
+function drawReadySplash(now) {
+  const on = Math.floor((now - trk.readyAt) / READY_BLINK_MS) % 2 === 0;
+  ring({ r0: RING_R0, r1: RING_R1, a0: 0, a1: 360, n: Math.round(360 / RING_PITCH), gap: RING_GAP, litFn: () => on && T().go });
+  if (on) label("READY", C, 252, 46, { color: T().go, weight: 700 });
+}
+
+/* ---------------- warning takeover ---------------- */
+function drawTakeover(w, now) {
+  const on = Math.floor(now / 250) % 2 === 0;
+  const red = T().warn;
+  ring({ r0: RING_R0, r1: RING_R1, a0: 0, a1: 360, n: Math.round(360 / RING_PITCH), gap: RING_GAP, litFn: () => on ? red : false, ghost: T().warnGhost });
+  label(w.label, C, 160, 46, { color: red, weight: 700 });
+  // the warning stays up when its value stops arriving, but the number dims and then goes, like everywhere
+  const f = fresh(ch[w.key], now), vc = f >= 1 ? red : f > 0 ? T().dim : null;
+  if (w.unit === "bar") {   // pressure
+    seg(pressText(ch[w.key].v), pressGhost(), C - 20, 292, 104, { color: vc, ghostColor: T().warnGhost });
+    label(pressUnit(), C + 118, 292, 22, { color: red, align: "left" });
+  } else if (w.unit === "V") {   // battery
+    seg(ch[w.key].v.toFixed(1), "88.8", C - 14, 292, 104, { color: vc, ghostColor: T().warnGhost });
+    label("V", C + 124, 292, 22, { color: red, align: "left" });
+  } else {
+    seg(tempText(ch[w.key].v), "888", C - 6, 292, 104, { color: vc, ghostColor: T().warnGhost });
+    degC(C + 128, 292, 22, red);
+  }
+  label("TAP TO ACK", C, 364, 20, { color: on ? red : rgba(red, 0.5) });
+}
+
+/* ---------------- boot: the ignition sequence ---------------- */
+/* 1. LOGO      Nine Tenths Engineering primary logo (brand kit v1, for-dark-bg)
+ *              at 420 px wide = 40 mm on the panel, the kit minimum.
+ * 2. DISSOLVE  a scan line sweeps the logo left to right; behind it the logo
+ *              breaks into ~420 dots (sampled from its own pixels) that spiral
+ *              out and land on the ring, lighting each segment as they arrive.
+ * 3. SWEEP     segment test (everything lit), a blink, then a comet runs the
+ *              ring up and back like a tach's needle sweep, with an afterglow
+ *              trail, while the gear, speed and shift ladder count with
+ *              it (page 1's layout: the tach).
+ * 4. TITLE     GR GAUGE decodes: each cell scrambles through 14-segment
+ *              characters and locks left to right with a flash, then a glint.
+ * 5. HANDOFF   the title fades and the live screen fades in; the ring ghost
+ *              never moves, so it reads as one continuous instrument.
+ * Only things the firmware's rasterizer does: dots, ring segments in any
+ * color, text (clipped to a column band for the glint), the logo image
+ * (clipped for the scan). Every frame is a pure function of the time since
+ * boot, so it renders the same at any frame rate. A tap skips to the handoff. */
+const BOOT_LOGO_MS = 2500, BOOT_DISSOLVE_MS = 1100, BOOT_SWEEP_MS = 1580, BOOT_TITLE_MS = 1200, BOOT_HANDOFF_MS = 500;
+const BOOT_DISSOLVE_AT = BOOT_LOGO_MS, BOOT_SWEEP_AT = BOOT_DISSOLVE_AT + BOOT_DISSOLVE_MS;
+const BOOT_TITLE_AT = BOOT_SWEEP_AT + BOOT_SWEEP_MS, BOOT_HANDOFF_AT = BOOT_TITLE_AT + BOOT_TITLE_MS;
+const BOOT_MS = BOOT_HANDOFF_AT + BOOT_HANDOFF_MS;
+const logo = new Image();
+logo.src = "data:image/png;base64,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";
+const LOGO_CROP = { x: 64, y: 61, w: 2272, h: 430 };   // artwork bbox inside the PNG's padding
+const LOGO_W = 420, LOGO_H = Math.round(LOGO_W * LOGO_CROP.h / LOGO_CROP.w);
+const LOGO_X = C - LOGO_W / 2, LOGO_Y = C - LOGO_H / 2;
+let bootAt = performance.now();
+let bootSlow = 1;          // ?bootslow=4 plays it 4x slower, for review
+let bootFreeze = null;     // ?bootat=3700 holds the boot at that moment (ms), for review and screenshots
+
+const clamp01 = v => v < 0 ? 0 : v > 1 ? 1 : v;
+const easeInOut = u => u < 0.5 ? 4 * u * u * u : 1 - (-2 * u + 2) ** 3 / 2;
+const easeOut = u => 1 - (1 - u) ** 3;
+/* A role as opaque [r, g, b] over the black face (rgba() roles are
+ * pre-multiplied, like the firmware's OVER_BLACK), and a mix of two */
+function rgbOf(c) {
+  if (c[0] === "#") {
+    let h = c.slice(1);
+    if (h.length === 3) h = [...h].map(x => x + x).join("");
+    const n = parseInt(h, 16);
+    return [n >> 16, (n >> 8) & 255, n & 255];
+  }
+  const [r, g, b, a = 1] = c.match(/\(([^)]+)\)/)[1].split(",").map(Number);
+  return [r * a, g * a, b * a];
+}
+const css = v => `rgb(${v.map(x => Math.round(x)).join(",")})`;
+const mixRGB = (x, y, t) => x.map((v, i) => v + (y[i] - v) * t);
+const mix = (a, b, t) => css(mixRGB(rgbOf(a), rgbOf(b), clamp01(t)));
+/* xorshift32: the same sequence in C, so the firmware samples the same dots */
+function xorshift(seed) {
+  let x = seed >>> 0;
+  return () => { x ^= x << 13; x >>>= 0; x ^= x >>> 17; x ^= x << 5; x >>>= 0; return x / 4294967296; };
+}
+const hash = n => { let x = (n * 2654435761) >>> 0; x ^= x >>> 15; x = Math.imul(x, 2246822519) >>> 0; return (x ^ (x >>> 13)) >>> 0; };
+
+/* ---- 2. dissolve ---- */
+const DOTS = 420, SCAN_MS = 380, FLY_MS = 650, LAND_FLASH_MS = 140, GHOST_IN_MS = 300;
+const DOTS_PER_SEG = DOTS / B_SEGS;
+let dots = null;           // built once from the logo's pixels
+function buildDots() {
+  const oc = document.createElement("canvas");
+  oc.width = LOGO_W; oc.height = LOGO_H;
+  const o = oc.getContext("2d");
+  o.drawImage(logo, LOGO_CROP.x, LOGO_CROP.y, LOGO_CROP.w, LOGO_CROP.h, 0, 0, LOGO_W, LOGO_H);
+  const d = o.getImageData(0, 0, LOGO_W, LOGO_H).data;
+  // every other pixel with ink is a candidate; DOTS of them chosen evenly by reservoir sampling (as the firmware)
+  const pick = [], rnd = xorshift(0x9E3779B9);
+  let n = 0;
+  for (let y = 1; y < LOGO_H; y += 2) for (let x = 1; x < LOGO_W; x += 2) {
+    const k = (y * LOGO_W + x) * 4;
+    if (d[k + 3] <= 160) continue;
+    const j = n < DOTS ? n : Math.floor(rnd() * (n + 1));
+    if (j < DOTS) pick[j] = [x, y, d[k], d[k + 1], d[k + 2]];
+    n++;
+  }
+  dots = pick.map((c, i) => {
+    const sx = LOGO_X + c[0] + 0.5, sy = LOGO_Y + c[1] + 0.5, seg = i % B_SEGS;
+    const ta = (135 + (seg + 0.2 + 0.6 * rnd()) * RING_PITCH) * Math.PI / 180;
+    const tr = RING_R0 + 5 + rnd() * (RING_R1 - RING_R0 - 10);
+    const a0 = Math.atan2(sy - C, sx - C);
+    let da = (ta - a0) % (2 * Math.PI); if (da < 0) da += 2 * Math.PI;   // always clockwise: one swirl
+    return { sx, sy, rgb: [c[2], c[3], c[4]], seg, r0: Math.hypot(sx - C, sy - C), a0, da, tr,
+             delay: c[0] / LOGO_W * SCAN_MS + rnd() * 60 };
+  });
+}
+logo.onload = buildDots;
+if (logo.complete && logo.naturalWidth) buildDots();
+function dotAt(p, t) {                    // position of a dot t ms into the dissolve
+  const e = easeInOut(clamp01((t - p.delay) / FLY_MS));
+  const r = p.r0 + (p.tr - p.r0) * e, a = p.a0 + p.da * e;
+  return [C + r * Math.cos(a), C + r * Math.sin(a), e];
+}
+/* Ring color for a level 0..1 (ghost -> accent) with a flash 0..1 on top (-> hero) */
+function ringLevel(b, flash) {
+  const base = mixRGB(rgbOf(T().ringGhost), rgbOf(T().accent), clamp01(b));
+  return css(mixRGB(base, rgbOf(T().hero), clamp01(flash)));
+}
+function bootRing(colorOf, ghostLevel = 1) {
+  ring({ r0: RING_R0, r1: RING_R1, a0: 135, a1: 405, n: B_SEGS, gap: RING_GAP, litFn: colorOf,
+         ghost: mix("#000", T().ringGhost, ghostLevel) });
+}
+function drawDissolve(t) {
+  const edge = LOGO_X + clamp01(t / SCAN_MS) * LOGO_W;
+  if (edge < LOGO_X + LOGO_W && logo.complete) {     // the logo right of the scan line
+    ctx.save();
+    ctx.beginPath(); ctx.rect(edge, 0, W, W); ctx.clip();
+    ctx.drawImage(logo, LOGO_CROP.x, LOGO_CROP.y, LOGO_CROP.w, LOGO_CROP.h, LOGO_X, LOGO_Y, LOGO_W, LOGO_H);
+    ctx.restore();
+    ctx.fillStyle = T().accent;                       // the scan line itself
+    ctx.fillRect(edge - 1, LOGO_Y - 6, 2, LOGO_H + 12);
+  }
+  const level = new Array(B_SEGS).fill(0), flash = new Array(B_SEGS).fill(0);
+  for (const p of dots || []) {
+    const land = p.delay + FLY_MS;
+    if (t >= land) {
+      level[p.seg] += 1 / DOTS_PER_SEG;
+      flash[p.seg] = Math.max(flash[p.seg], 1 - (t - land) / LAND_FLASH_MS);
+    }
+  }
+  bootRing(i => level[i] > 0 && ringLevel(level[i], flash[i] * 0.8), clamp01(t / GHOST_IN_MS));
+  if (!dots) return;
+  const acc = rgbOf(T().accent), hero = rgbOf(T().hero);
+  for (const p of dots) {
+    if (t < p.delay || t >= p.delay + FLY_MS) continue;
+    for (let k = 2; k >= 0; k--) {                    // a short motion trail, oldest first
+      const [x, y, e] = dotAt(p, t - k * 16);
+      if (e <= 0) continue;
+      const col = mixRGB(mixRGB(p.rgb, acc, e), hero, k === 0 ? 0.35 : 0);
+      ctx.fillStyle = css(col.map(v => v * [1, 0.5, 0.22][k]));
+      ctx.beginPath(); ctx.arc(x, y, [2.1, 1.7, 1.3][k], 0, Math.PI * 2); ctx.fill();
+    }
+  }
+}
+
+/* ---- 3. sweep ---- */
+const TEST_MS = 300, BLINK_MS = 120, UP_MS = 560, DOWN_MS = 450, TRAIL_MS = 180, TRAIL_STEP_MS = 4, OUT_MS = 150;
+function headAt(t) {                      // comet head, in segments (0..B_SEGS), t ms into the sweep
+  const u = t - TEST_MS - BLINK_MS;
+  if (u <= 0) return 0;
+  if (u < UP_MS) return B_SEGS * easeInOut(u / UP_MS);
+  return B_SEGS * (1 - easeInOut(clamp01((u - UP_MS) / DOWN_MS)));
+}
+/* Page 1's readouts, lit or counting with the head: gear, speed,
+ * the shift ladder (accent, by the counted rpm), labels, scale */
+function bootReadouts(h, lit) {
+  const f = h / B_SEGS, rpm = f * TACH_MAX;
+  const g = (c) => lit ? { lit: true, color: c } : { color: c };
+  drawLadder(k => (lit || rpm >= ladderAt(SHIFT_RPM, k)) && (lit ? T().hero : T().accent), T().ghost);
+  const b = GEAR_BOX;
+  ctx.lineWidth = 2; ctx.strokeStyle = lit ? T().hero : T().label;
+  ctx.strokeRect(b.x, b.y, b.w, b.h);
+  const neutral = !lit && h < 0.5;
+  seg(neutral ? "N" : String(1 + Math.min(7, Math.floor(f * 8))), neutral ? "~" : "8", TACH_GEAR_X, TACH_GEAR_Y, TACH_GEAR_SIZE,
+      { ...g(T().secondary), skew: TACH_SKEW, font: neutral ? "DSEG14" : "DSEG7" });
+  seg(String(Math.round(uSpeed(f * 250))), "888", TACH_SPD_X, TACH_SPD_Y, TACH_SPD_SIZE, { ...g(T().hero), skew: TACH_SKEW });
+  label(speedUnit(), C, TACH_SPD_Y + 32, 20, { color: lit ? T().hero : T().faint });
+  drawTachMarks();
+}
+function drawSweep(t) {
+  if (t < TEST_MS) {                      // segment test: everything lit, the ring flashing to hero
+    bootRing(() => ringLevel(1, 1 - t / TEST_MS));
+    bootReadouts(B_SEGS, true);
+    return;
+  }
+  if (t < TEST_MS + BLINK_MS) {           // a blink: all dark, like a power cycle
+    bootRing(() => false);
+    seg(null, "8", TACH_GEAR_X, TACH_GEAR_Y, TACH_GEAR_SIZE, { skew: TACH_SKEW });
+    seg(null, "888", TACH_SPD_X, TACH_SPD_Y, TACH_SPD_SIZE, { skew: TACH_SKEW });
+    drawLadder(() => false, T().ghost);
+    return;
+  }
+  const h = headAt(t);
+  const level = new Array(B_SEGS).fill(0);
+  for (let i = 0; i < B_SEGS; i++) if (i < h) level[i] = 0.32;          // the filled bar, as the live ring lights
+  /* the head and its afterglow: every segment the head crossed in the last
+   * TRAIL_MS glows by how recently, so a fast head leaves a solid tail */
+  let prev = headAt(t);
+  for (let age = 0; age <= TRAIL_MS; age += TRAIL_STEP_MS) {
+    const hj = headAt(t - age), b = 1.25 * (1 - age / TRAIL_MS);
+    const lo = Math.floor(Math.min(prev, hj)), hi = Math.floor(Math.max(prev, hj));
+    for (let i = Math.max(0, lo); i <= Math.min(B_SEGS - 1, hi); i++) if (hj > 0 || prev > 0) level[i] = Math.max(level[i], b);
+    prev = hj;
+  }
+  bootRing(i => level[i] > 0 && ringLevel(level[i], level[i] - 1));      // over 1: toward hero
+  const out = BOOT_SWEEP_MS - OUT_MS;
+  if (t > out) ctx.globalAlpha = clamp01(1 - (t - out) / OUT_MS);         // readouts fade before the title
+  bootReadouts(h, false);
+  ctx.globalAlpha = 1;
+}
+
+/* ---- 4. title ---- */
+const TITLE = "GR GAUGE", TITLE_GHOST = "~~!~~~~~", TITLE_SIZE = 46, TITLE_Y = 252;
+const SCRAMBLE = "0123456789ABCDEFGHJKLMNPRSTUVXYZ";
+const CELL_START_MS = 40, CELL_LOCK_MS = 140, CELL_STEP_MS = 75, SCRAMBLE_MS = 45;
+const GLINT_AT = 780, GLINT_MS = 320, GLINT_HALF = 28;
+function drawTitle(t, withRing = true) {
+  if (withRing) bootRing(() => false);
+  ctx.font = `700 ${TITLE_SIZE}px DSEG14`;
+  ctx.textBaseline = "alphabetic"; ctx.textAlign = "left";
+  const cw = ctx.measureText(TITLE_GHOST).width / TITLE.length, x0 = C - cw * TITLE.length / 2;
+  ctx.fillStyle = mix("#000", T().ghost, clamp01(t / 150)); ctx.fillText(TITLE_GHOST, x0, TITLE_Y);
+  const scr = mix(T().ghost, T().accent, 0.85);
+  for (let i = 0; i < TITLE.length; i++) {
+    if (TITLE[i] === " ") continue;
+    const start = CELL_START_MS * i, lock = CELL_LOCK_MS + CELL_STEP_MS * i, x = x0 + i * cw;
+    if (t < start) continue;
+    if (t < lock) {                       // scrambling
+      ctx.fillStyle = scr;
+      ctx.fillText(SCRAMBLE[hash(i * 97 + Math.floor(t / SCRAMBLE_MS)) % SCRAMBLE.length], x, TITLE_Y);
+      continue;
+    }
+    const fl = clamp01(1 - (t - lock) / 160);
+    if (fl > 0) {                         // lock flash: a soft halo
+      ctx.fillStyle = mix("#000", T().accent, 0.45 * fl);
+      ctx.fillText(TITLE[i], x - 1.5, TITLE_Y); ctx.fillText(TITLE[i], x + 1.5, TITLE_Y);
+    }
+    ctx.fillStyle = mix(T().hero, "#fff", 0.6 * fl);   // toward white, not to it: retro stays one hue
+    ctx.fillText(TITLE[i], x, TITLE_Y);
+  }
+  const gu = (t - GLINT_AT) / GLINT_MS;
+  if (gu > 0 && gu < 1) {                 // the glint: white text in a band sweeping across
+    const xc = x0 - GLINT_HALF + (cw * TITLE.length + 2 * GLINT_HALF) * easeInOut(gu);
+    for (const [hw, a] of [[GLINT_HALF, 0.25], [GLINT_HALF * 0.6, 0.3], [GLINT_HALF * 0.25, 0.45]]) {
+      ctx.save();
+      ctx.beginPath(); ctx.rect(xc - hw, 0, 2 * hw, W); ctx.clip();
+      ctx.fillStyle = mix(T().hero, "#fff", 0.6); ctx.globalAlpha *= a;
+      ctx.fillText(TITLE.replace(" ", "!"), x0, TITLE_Y);
+      ctx.restore();
+    }
+  }
+  label("V0.1  MOCK", C, 296, 20, { color: mix("#000", T().faint, clamp01((t - 700) / 300)) });
+}
+
+function drawBoot(t) {
+  if (t < BOOT_DISSOLVE_AT) {
+    if (logo.complete) ctx.drawImage(logo, LOGO_CROP.x, LOGO_CROP.y, LOGO_CROP.w, LOGO_CROP.h, LOGO_X, LOGO_Y, LOGO_W, LOGO_H);
+    return;
+  }
+  if (t < BOOT_SWEEP_AT) { drawDissolve(t - BOOT_DISSOLVE_AT); return; }
+  if (t < BOOT_TITLE_AT) { drawSweep(t - BOOT_SWEEP_AT); return; }
+  drawTitle(t - BOOT_TITLE_AT);
+}
+
+function drawPageDots() {
+  for (let i = 0; i < PAGES.length; i++) {
+    ctx.fillStyle = i === page ? T().dotOn : T().dotOff;
+    ctx.beginPath(); ctx.arc(C + (i - (PAGES.length - 1) / 2) * 16, 446, 3.5, 0, Math.PI * 2); ctx.fill();
+  }
+}
+/* Reserved slot in the rings' bottom opening, above the page dots: no page
+ * draws here. Acked warnings win; otherwise the track status. */
+function drawStatusSlot(now) {
+  const ws = activeWarnings().filter(w => warnState[w.key].acked);
+  if (!ws.length) {
+    const [txt, role] = statusText(now);
+    label(txt, C, 426, 20, { color: T()[role], weight: 700 });
+    return;
+  }
+  const tags = ws.filter(w => !w.tire).map(w => w.label);
+  const tires = ws.filter(w => w.tire).map(w => w.tire);
+  // "TIRE FL RR", not one tag each; three or more is just "TIRES"
+  if (tires.length) tags.push(tires.length > 2 ? "TIRES" : "TIRE " + tires.join(" "));
+  label(tags.join(" "), C, 426, 20, { color: T().warn, weight: 700 });
+}
+
+/* pixel orbit: whole-frame offset to spread wear */
+const ORBIT = [[0,0],[2,0],[2,2],[0,2],[-2,2],[-2,0],[-2,-2],[0,-2],[2,-2]];
+let orbit = false;      // burn-in protection, user setting (off by default)
+let orbitDemo = false;
+
+/* ---------------- settings (double tap) ---------------- */
+/* Three screens, swipe between them: 0 = brightness (-/+ above
+ * SET_SPLIT_Y) and burn-in toggle (below it); 1 = hot tire pressure
+ * targets, front -/+ above, rear -/+ below; 2 = units (a tap cycles
+ * METRIC, IMPERIAL, UK). Nothing else is a setting: the car is detected, the
+ * boost scale widens by itself, READY and the shift point are fixed.
+ * DONE in the rings' bottom opening. Closes by itself after
+ * SETTINGS_IDLE_MS without a touch; a warning still takes over. */
+const SETTINGS_IDLE_MS = 15000, SET_TOP_Y = 150, SET_SPLIT_Y = 268, SET_DONE_Y = 385, SET_SCREENS = 3;
+let settings = null;    // { until, screen } while open
+/* Hot pressure targets per axle, kept in bar: 1.50-3.00 in 0.05 steps, or
+ * in psi 22.0-43.5 in 0.5 steps (the units decide what a step is) */
+const TGT_MIN = 1.5, TGT_MAX = 3.0, TGT_STEP = 0.05;
+const TGT_MIN_PSI = 22, TGT_MAX_PSI = 43.5, TGT_STEP_PSI = 0.5;
+const target = { f: 2.2, r: 2.2 };
+function setTarget(axle, v) {
+  target[axle] = Math.max(TGT_MIN, Math.min(TGT_MAX, v));
+  try { localStorage.setItem("grg-tgt-" + axle, target[axle].toFixed(4)); } catch {}
+}
+function stepTarget(axle, dir) {
+  const t = target[axle];
+  if (!units.psi) { setTarget(axle, Math.round((t + dir * TGT_STEP) / TGT_STEP) * TGT_STEP); return; }
+  const psi = Math.round(t * PSI_PER_BAR / TGT_STEP_PSI) * TGT_STEP_PSI + dir * TGT_STEP_PSI;
+  setTarget(axle, Math.max(TGT_MIN_PSI, Math.min(TGT_MAX_PSI, psi)) / PSI_PER_BAR);
+}
+const tireTarget = k => target[k[0] === "f" ? "f" : "r"];
+let bright = 100;
+function setBright(v) {
+  bright = Math.max(10, Math.min(100, Math.round(v)));
+  cv.style.filter = `brightness(${bright / 100})`;
+  $("bright").value = bright;
+  $("brightv").textContent = bright + "%";
+  try { localStorage.setItem("grg-bright", bright); } catch {}
+}
+function setOrbit(on) {
+  orbit = on;
+  try { localStorage.setItem("grg-orbit", on ? "1" : "0"); } catch {}
+  syncButtons();
+}
+function openSettings(now) { settings = { until: now + SETTINGS_IDLE_MS, screen: 0 }; }
+function settingsSwipe(dx, now) {
+  settings.until = now + SETTINGS_IDLE_MS;
+  settings.screen = (settings.screen + (dx < 0 ? 1 : -1) + SET_SCREENS) % SET_SCREENS;
+}
+function settingsTap(x, y, now) {
+  settings.until = now + SETTINGS_IDLE_MS;
+  if (y >= SET_DONE_Y) { settings = null; return; }
+  if (y < SET_TOP_Y) return;
+  const side = x < C - 60 ? -1 : x > C + 60 ? 1 : 0;
+  if (settings.screen === 0) {
+    if (y >= SET_SPLIT_Y) setOrbit(!orbit);
+    else if (side) setBright(bright + side * 10);
+  } else if (settings.screen === 1) {
+    if (side) stepTarget(y < SET_SPLIT_Y ? "f" : "r", side);
+  } else if (y < SET_SPLIT_Y) setUnits(UNIT_SETS.indexOf(units) + 1);    // units: a tap cycles
+}
+/* Lower row of a two-row screen: label and value baselines (the top row's are 172 / 250) */
+const SET_LOW_LBL = 298, SET_LOW_VAL = 370;
+/* - and + as solid bars: bigger, clearer tap targets than glyphs; cy = bar center */
+function plusMinus(cy) {
+  ctx.fillStyle = T().accent;
+  ctx.fillRect(C - 158, cy - 3.5, 36, 7);
+  ctx.fillRect(C + 122, cy - 3.5, 36, 7); ctx.fillRect(C + 136.5, cy - 18, 7, 36);
+}
+function drawSettings() {
+  if (settings.screen === 0) {
+    label("SETTINGS", C, 112, 20, { color: T().secondary });
+    label("BRIGHTNESS", C, 172, 20, { color: T().faint });
+    plusMinus(229.5);
+    seg(String(bright), "888", C, 250, 50, { color: T().hero });
+    label("BURN-IN", C, SET_LOW_LBL, 20, { color: T().faint });
+    label(orbit ? "ON" : "OFF", C, SET_LOW_VAL, 42, { color: orbit ? T().accent : T().label, weight: 700 });
+  } else if (settings.screen === 1) {
+    label("TIRE TARGETS", C, 112, 20, { color: T().secondary });
+    label("FRONT " + pressUnit() + " HOT", C, 172, 20, { color: T().faint });
+    plusMinus(229.5);
+    seg(targetText(target.f), pressGhost(), C, 250, 50, { color: T().hero });
+    label("REAR " + pressUnit() + " HOT", C, SET_LOW_LBL, 20, { color: T().faint });
+    plusMinus(SET_LOW_VAL - 20.5);
+    seg(targetText(target.r), pressGhost(), C, SET_LOW_VAL, 50, { color: T().hero });
+  } else {
+    label("UNITS", C, 112, 20, { color: T().secondary });
+    label("TAP TO CHANGE", C, 172, 20, { color: T().faint });
+    label(units.name, C, 250, 42, { color: T().accent, weight: 700 });
+    label(speedUnit(), C - 100, SET_LOW_VAL - 22, 20, { color: T().label });
+    label(pressUnit(), C, SET_LOW_VAL - 22, 20, { color: T().label });
+    degC(C + 90, SET_LOW_VAL - 22, 20, T().label);
+  }
+  if (settings.screen < 2) { ctx.fillStyle = T().rule; ctx.fillRect(C - 150, SET_SPLIT_Y, 300, 1.5); }
+  label("DONE", C, 426, 20, { color: T().secondary, weight: 700 });
+  for (let i = 0; i < SET_SCREENS; i++) {           // screen dots, like the page dots
+    ctx.fillStyle = i === settings.screen ? T().dotOn : T().dotOff;
+    ctx.beginPath(); ctx.arc(C + (i - (SET_SCREENS - 1) / 2) * 16, 446, 3.5, 0, Math.PI * 2); ctx.fill();
+  }
+}
+
+function render(now) {
+  const scale = cv.width / W;
+  ctx.setTransform(scale, 0, 0, scale, 0, 0);
+  ctx.fillStyle = T().bg; ctx.fillRect(0, 0, W, W);
+  if (orbit || orbitDemo) {
+    const o = ORBIT[Math.floor(now / (orbitDemo ? 1500 : 120000)) % ORBIT.length];
+    ctx.translate(o[0] * (orbitDemo ? 3 : 1), o[1] * (orbitDemo ? 3 : 1));
+  }
+
+  ctx.globalAlpha = 1;
+  const bt = bootFreeze ?? (now - bootAt) / bootSlow;
+  if (bt < BOOT_HANDOFF_AT) { drawBoot(bt); return; }
+  if (bt < BOOT_MS) {                     // handoff: the title fades out, the live screen fades in
+    const u = (bt - BOOT_HANDOFF_AT) / BOOT_HANDOFF_MS;
+    bootRing(() => false);                // the ring ghost stays put underneath both
+    ctx.globalAlpha = clamp01(1 - u / 0.4);                    // title out first ...
+    drawTitle(BOOT_TITLE_MS, false);
+    ctx.globalAlpha = clamp01((u - 0.4) / 0.6);                // ... then the live screen in
+  }
+
+  const tw = takeover();
+  if (tw) { drawTakeover(tw, now); return; }
+  if (settings) { drawSettings(); return; }
+  if (now - trk.readyAt < READY_SPLASH_MS) { drawReadySplash(now); return; }
+  [drawTach, drawBoost, drawEngine, drawTemps, drawTires, drawSession][page](now);
+  drawPageDots();
+  drawStatusSlot(now);
+  ctx.globalAlpha = 1;
+}
+
+/* ================================================================
+ * Main loop
+ * ================================================================ */
+let last = performance.now(), acc = 0;
+function frame(now) {
+  const dt = Math.min(0.1, (now - last) / 1000); last = now;
+  acc += dt;
+  while (acc >= 0.02) { simStep(0.02); acc -= 0.02; }
+  pump();
+  boostStep(now);
+  boostScaleStep(now);
+  evalWarnings(now);
+  peakUpdate(now);
+  trendUpdate(now);
+  trackStep(now, dt);
+  sessionStep(now);
+  if (settings && performance.now() > settings.until) settings = null;   // same clock as the touch handlers
+  render(now);
+  if (Math.floor(now / 200) !== Math.floor((now - dt * 1000) / 200)) updateReadout(now);
+  requestAnimationFrame(frame);
+}
+setInterval(pump, 4);    // keep the poller going between frames
+
+/* ================================================================
+ * UI wiring
+ * ================================================================ */
+const $ = id => document.getElementById(id);
+const pagesEl = $("pages");
+PAGES.forEach((p, i) => {
+  const b = document.createElement("button");
+  b.textContent = p[0] + p.slice(1).toLowerCase();
+  b.onclick = () => setPage(i);
+  pagesEl.appendChild(b);
+});
+/* The page shown is remembered: the gauge starts where the driver left it
+ * (the device saves it 2 s after it settles, never under hard throttle) */
+function setPage(i) {
+  page = (i + PAGES.length) % PAGES.length;
+  try { localStorage.setItem("grg-page", page); } catch {}
+  syncButtons();
+}
+
+function setScenario(s) { scenario = s; if (s === "oiltemp") startOilRamp(); syncButtons(); }
+document.querySelectorAll("[data-sc]").forEach(b => b.onclick = () => setScenario(b.dataset.sc));
+function coldStart() { Object.assign(eng, { coolant: 21, oil: 21, iat: 24, cact: 24, gbox: 21, rdiff: 21 }); for (const k of TIRES) tire[k].t = 20; }
+$("cold").onclick = coldStart;
+/* f toggles a slow leak on the front left; off reinflates it */
+$("pit").onclick = () => { pit = !pit; syncButtons(); };
+$("puncture").onclick = () => { puncture = !puncture; if (!puncture) tire.fl.cold = TIRE_COLD_BAR; syncButtons(); };
+$("tuned").onclick = () => { tuned = !tuned; syncButtons(); };
+$("alt").onclick = () => { altFault = !altFault; syncButtons(); };
+
+$("mute").onclick = () => { fault.mute = !fault.mute; syncButtons(); };
+$("pending").onclick = () => { fault.pending = !fault.pending; syncButtons(); };
+$("latency").onclick = () => { fault.latency = LATENCIES[(LATENCIES.indexOf(fault.latency) + 1) % LATENCIES.length]; syncButtons(); };
+$("boot").onclick = () => { bootAt = performance.now(); };
+$("orbit").onclick = () => { orbitDemo = !orbitDemo; syncButtons(); };
+$("settings").onclick = () => { if (settings) settings = null; else openSettings(performance.now()); };
+
+$("bright").oninput = e => setBright(+e.target.value);
+
+function syncButtons() {
+  [...pagesEl.children].forEach((b, i) => b.classList.toggle("on", i === page));
+  document.querySelectorAll("[data-sc]").forEach(b => b.classList.toggle("on", b.dataset.sc === scenario));
+  $("mute").classList.toggle("on", fault.mute);
+  $("puncture").classList.toggle("on", puncture);
+  $("tuned").classList.toggle("on", tuned);
+  $("alt").classList.toggle("on", altFault);
+  $("pit").classList.toggle("on", pit);
+  $("pending").classList.toggle("on", fault.pending);
+  $("latency").classList.toggle("on", fault.latency > 0);
+  $("latency").firstChild.textContent = `+${fault.latency} ms`;
+  $("orbit").classList.toggle("on", orbitDemo);
+  document.querySelectorAll("[data-scale]").forEach(b => b.classList.toggle("on", b.dataset.scale === String(scaleMode)));
+}
+
+/* Scale: CSS diameter of the 466 px panel. Real size = 1.75" panel at the screen's physical PPI. */
+let scaleMode = 1;
+let ppi = Math.round(96 * (window.devicePixelRatio || 1));
+try { const s = localStorage.getItem("grg-ppi"); if (s) ppi = +s; } catch {}
+$("ppi").value = ppi;
+$("ppi").onchange = e => { ppi = +e.target.value || ppi; try { localStorage.setItem("grg-ppi", ppi); } catch {} applyScale(); };
+document.querySelectorAll("[data-scale]").forEach(b => b.onclick = () => {
+  scaleMode = b.dataset.scale === "real" ? "real" : +b.dataset.scale; applyScale();
+});
+
+function applyScale() {
+  const dpr = window.devicePixelRatio || 1;
+  const css = scaleMode === "real" ? 1.75 * ppi / dpr : W * scaleMode;
+  cv.style.width = cv.style.height = css + "px";
+  cv.width = cv.height = Math.round(css * dpr);
+  $("bezel").style.setProperty("--bez", Math.max(8, css * 0.06) + "px");
+  $("caption").textContent = scaleMode === "real"
+    ? `Real size: 44.5 mm active area at ${ppi} PPI. Measure the circle with a ruler and adjust PPI until it matches. The real panel is ~266 PPI, so it will look sharper than this.`
+    : `466 × 466 framebuffer shown at ${scaleMode}× (${Math.round(css)} CSS px). Much bigger than the real 44.5 mm panel — use Real size to judge legibility.`;
+  syncButtons();
+}
+window.addEventListener("resize", applyScale);
+
+/* Touch: 1 tap = next page, 2 taps = settings, horizontal swipe = page.
+ * Taps count while each press starts within TAP_WINDOW_MS of the last
+ * release; 1 acts once the window closes, 2 acts at once. A tap while a warning is up acknowledges it at once; in
+ * settings, taps hit the settings rows directly. Same rules as app_touch()
+ * in gauge/main/core/app.c. */
+const TAP_WINDOW_MS = 300;
+let down = null, taps = 0, tapTimer = null;
+function panelXY(e) {        // client px -> 466 panel px
+  const r = cv.getBoundingClientRect();
+  return [(e.clientX - r.left) / r.width * W, (e.clientY - r.top) / r.height * W];
+}
+$("glass").addEventListener("pointerdown", e => {
+  $("glass").setPointerCapture(e.pointerId);   // release lands here even off the glass
+  clearTimeout(tapTimer); tapTimer = null;      // this press may add to the count
+  down = { x: e.clientX };
+});
+$("glass").addEventListener("pointercancel", () => { down = null; taps = 0; });
+$("glass").addEventListener("pointerup", e => {
+  if (!down) return;
+  const dx = e.clientX - down.x; down = null;
+  const now = performance.now();
+  if ((now - bootAt) / bootSlow < BOOT_HANDOFF_AT) { bootAt = now - BOOT_HANDOFF_AT * bootSlow; taps = 0; return; }   // skip the boot
+  if (ackTakeover()) { taps = 0; return; }
+  if (settings) {
+    taps = 0;
+    if (Math.abs(dx) > 30) settingsSwipe(dx, now);
+    else { const [x, y] = panelXY(e); settingsTap(x, y, now); }
+    return;
+  }
+  if (Math.abs(dx) > 30) { taps = 0; setPage(page + (dx < 0 ? 1 : -1)); return; }
+  if (++taps >= 2) { taps = 0; openSettings(now); return; }
+  tapTimer = setTimeout(() => {
+    tapTimer = null;
+    if (taps === 1) setPage(page + 1);
+    taps = 0;
+  }, TAP_WINDOW_MS);
+});
+function ackTakeover() {
+  const w = takeover();
+  if (w) { warnState[w.key].acked = true; return true; }
+  return false;
+}
+
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "INPUT") return;
+  const k = e.key;
+  if (k === "ArrowRight") setPage(page + 1);
+  else if (k === "ArrowLeft") setPage(page - 1);
+  else if (k === "n") setScenario("normal");
+  else if (k === "h") setScenario("heatsoak");
+  else if (k === "o") setScenario("oiltemp");
+  else if (k === "k") setScenario("lean");
+  else if (k === "e") setScenario("oilp");
+  else if (k === "c") coldStart();
+  else if (k === "f") $("puncture").click();
+  else if (k === "x") $("tuned").click();
+  else if (k === "v") $("alt").click();
+  else if (k === "i") $("pit").click();
+  else if (k === "m") $("mute").click();
+  else if (k === "p") $("pending").click();
+  else if (k === "l") $("latency").click();
+  else if (k === "b") $("boot").click();
+  else if (k === "s") {      // closed -> screen 1 -> 2 -> 3 -> closed
+    if (!settings) openSettings(performance.now());
+    else if (settings.screen < SET_SCREENS - 1) settings.screen++;
+    else settings = null;
+  }
+  else if (k === "u") setUnits(UNIT_SETS.indexOf(units) + 1);   // metric, imperial, UK
+  else if (k === "+" || k === "=") setBright(bright + 10);
+  else if (k === "-") setBright(bright - 10);
+  else if (k === " " || k === "Enter") { ackTakeover(); e.preventDefault(); }
+  else if (k >= "1" && k <= String(PAGES.length)) setPage(+k - 1);
+});
+
+function updateReadout(now) {
+  const f = (c, d = 0) => c.v === null ? "—" : (fresh(c, now) ? "" : "~") + c.v.toFixed(d);
+  const rows = [
+    ["boost", f(ch.boost, 2), "rpm", f(ch.rpm)],
+    ["gear", ch.gear.v === null ? "—" : ch.gear.v || "N", "fast", fastArrivals.length + " Hz"],
+    ["speed", f(ch.speed), "oil p", f(ch.oilp, 1)],
+    ["lambda", f(ch.lam, 2), "cmd", f(ch.lamCmd, 2)],
+    ["ign", f(ch.ign), "knock", f(ch.knock, 1)],
+    ["tps", ch.tps.v === null ? "—" : Math.round(ch.tps.v * 100) + "%", "pwr", trk.pwr === null ? "—" : Math.round(trk.pwr) + "%"],
+    ["state", trk.state, "hard", trk.hard.toFixed(0) + " s"],
+    ["water", f(ch.coolant), "oil", f(ch.oil)],
+    ["iat", f(ch.iat), "cact", f(ch.cact)],
+    ["gbox", f(ch.gbox), "rdiff", f(ch.rdiff)],
+    ["batt", f(ch.batt, 1), "scale", bmax.toFixed(1)],
+    ["fl", f(ch.tp_fl, 2), "fr", f(ch.tp_fr, 2)],
+    ["rl", f(ch.tp_rl, 2), "rr", f(ch.tp_rr, 2)],
+  ];
+  $("readout").innerHTML = rows.map(r => `<span>${r[0]}</span><b>${r[1]}</b><span>${r[2]}</span><b>${r[3]}</b>`).join("");
+}
+
+/* settings survive a reload, like the device's NVS */
+try { const b = localStorage.getItem("grg-bright"); if (b) setBright(+b); } catch {}
+try { orbit = localStorage.getItem("grg-orbit") === "1"; } catch {}
+try { const b = +localStorage.getItem("grg-bmax"); if (BMAX_STEPS.includes(b)) bmax = b; } catch {}   // remembered, not set
+try { for (const a of ["f", "r"]) { const v = localStorage.getItem("grg-tgt-" + a); if (v) setTarget(a, +v); } } catch {}
+try { const v = localStorage.getItem("grg-units"); if (v !== null) setUnits(+v); } catch {}
+try { const v = +localStorage.getItem("grg-page"); if (Number.isInteger(v) && v >= 0 && v < PAGES.length) page = v; } catch {}
+// grg-car, grg-rdy-oil, grg-shift (settings of older versions) and grg-rdy-wtr / -tbar: ignored
+pwrLoad();
+/* URL overrides, e.g. index.html?page=temps&scenario=oiltemp&noboot
+ * (boot review: &bootslow=4 plays it 4x slower, &bootfrom=3600 starts 3.6 s in,
+ * &bootat=3700 holds it at 3.7 s) */
+const qs = new URLSearchParams(location.search);
+if (PAGES.includes((qs.get("page") || "").toUpperCase())) page = PAGES.indexOf(qs.get("page").toUpperCase());
+if (["normal", "heatsoak", "oiltemp", "lean", "oilp"].includes(qs.get("scenario"))) scenario = qs.get("scenario");
+if (qs.has("units")) setUnits(UNIT_SETS.findIndex(u => u.name === qs.get("units").toUpperCase()));
+if (qs.has("oil")) eng.oil = +qs.get("oil");
+if (scenario === "oiltemp") startOilRamp();
+if (qs.has("t")) simT = +qs.get("t");
+if (qs.has("noboot")) bootAt = -1e9;
+if (qs.has("bootat")) bootFreeze = +qs.get("bootat") || 0;
+if (qs.has("bootslow")) bootSlow = Math.max(0.1, +qs.get("bootslow") || 1);   // review the boot in slow motion
+if (qs.has("bootfrom")) bootAt = performance.now() - (+qs.get("bootfrom") || 0) * bootSlow;   // start at ms into the boot
+applyScale();
+document.fonts.load("700 20px DSEG7");
+document.fonts.load("700 20px DSEG14");
+requestAnimationFrame(frame);
+</script>
+<!-- ninetenths.se embed (tools/build-gauge.py): the panel hidden, the display fitted to the frame,
+     driven by the page that frames it (assets/in-development.js) -->
+<style>
+  .panel, .caption { display: none !important; }
+  html, body { height: 100%; overflow: hidden; background: #000 !important; }
+  main { padding: 0 !important; height: 100%; align-items: center !important; justify-content: center !important; }
+  .stage { gap: 0 !important; }
+  .bezel { box-shadow: 0 0 0 1px #1d1b18, inset 0 2px 3px rgba(255,255,255,.10) !important; }
+</style>
+<script>
+"use strict";
+(() => {
+  const fit = () => { scaleMode = Math.max(0.2, Math.min(innerWidth, innerHeight) / 1.125 / W); applyScale(); };
+  addEventListener("resize", fit);
+  fit();
+  /* every demo starts from the normal drive with all faults off */
+  const reset = () => {
+    if (pit) $("pit").click();
+    if (puncture) $("puncture").click();
+    if (tuned) $("tuned").click();
+    if (altFault) $("alt").click();
+    if (fault.mute) $("mute").click();
+    setScenario("normal");
+  };
+  const RUN = {
+    drive: () => {},
+    cold: () => coldStart(),
+    heatsoak: () => setScenario("heatsoak"),
+    oiltemp: () => setScenario("oiltemp"),
+    lean: () => setScenario("lean"),
+    oilp: () => setScenario("oilp"),
+    pit: () => $("pit").click(),
+    puncture: () => $("puncture").click(),
+    tuned: () => $("tuned").click(),
+    alt: () => $("alt").click(),
+    mute: () => $("mute").click(),
+  };
+  addEventListener("message", e => {
+    const m = e.data;
+    if (e.origin !== location.origin || !m || m.grg !== 1) return;
+    if (typeof m.run === "string" && Object.hasOwn(RUN, m.run)) { reset(); RUN[m.run](); }
+    if (Number.isInteger(m.page)) setPage(m.page);
+    if (typeof m.units === "string") {
+      const i = UNIT_SETS.findIndex(u => u.name === m.units);
+      if (i >= 0) setUnits(i);
+    }
+  });
+  let last = "";
+  setInterval(() => {
+    const s = page + "|" + units.name;
+    if (s === last) return;
+    last = s;
+    parent.postMessage({ grg: 1, page, units: units.name }, location.origin);
+  }, 250);
+})();
+</script>
+
+</body>
+</html>

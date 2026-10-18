@@ -1,0 +1,56 @@
+<!-- ninetenths.se embed (tools/build-gauge.py): the panel hidden, the display fitted to the frame,
+     driven by the page that frames it (assets/in-development.js) -->
+<style>
+  .panel, .caption { display: none !important; }
+  html, body { height: 100%; overflow: hidden; background: #000 !important; }
+  main { padding: 0 !important; height: 100%; align-items: center !important; justify-content: center !important; }
+  .stage { gap: 0 !important; }
+  .bezel { box-shadow: 0 0 0 1px #1d1b18, inset 0 2px 3px rgba(255,255,255,.10) !important; }
+</style>
+<script>
+"use strict";
+(() => {
+  const fit = () => { scaleMode = Math.max(0.2, Math.min(innerWidth, innerHeight) / 1.125 / W); applyScale(); };
+  addEventListener("resize", fit);
+  fit();
+  /* every demo starts from the normal drive with all faults off */
+  const reset = () => {
+    if (pit) $("pit").click();
+    if (puncture) $("puncture").click();
+    if (tuned) $("tuned").click();
+    if (altFault) $("alt").click();
+    if (fault.mute) $("mute").click();
+    setScenario("normal");
+  };
+  const RUN = {
+    drive: () => {},
+    cold: () => coldStart(),
+    heatsoak: () => setScenario("heatsoak"),
+    oiltemp: () => setScenario("oiltemp"),
+    lean: () => setScenario("lean"),
+    oilp: () => setScenario("oilp"),
+    pit: () => $("pit").click(),
+    puncture: () => $("puncture").click(),
+    tuned: () => $("tuned").click(),
+    alt: () => $("alt").click(),
+    mute: () => $("mute").click(),
+  };
+  addEventListener("message", e => {
+    const m = e.data;
+    if (e.origin !== location.origin || !m || m.grg !== 1) return;
+    if (typeof m.run === "string" && Object.hasOwn(RUN, m.run)) { reset(); RUN[m.run](); }
+    if (Number.isInteger(m.page)) setPage(m.page);
+    if (typeof m.units === "string") {
+      const i = UNIT_SETS.findIndex(u => u.name === m.units);
+      if (i >= 0) setUnits(i);
+    }
+  });
+  let last = "";
+  setInterval(() => {
+    const s = page + "|" + units.name;
+    if (s === last) return;
+    last = s;
+    parent.postMessage({ grg: 1, page, units: units.name }, location.origin);
+  }, 250);
+})();
+</script>
