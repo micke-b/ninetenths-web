@@ -5,6 +5,8 @@
   html, body { height: 100%; overflow: hidden; background: #000 !important; }
   main { padding: 0 !important; height: 100%; align-items: center !important; justify-content: center !important; }
   .stage { gap: 0 !important; }
+  /* a vertical drag scrolls the page around it (the browser cancels the gesture); taps and sideways swipes stay the gauge's */
+  .glass { touch-action: pan-y !important; }
   .bezel { box-shadow: 0 0 0 1px #1d1b18, inset 0 2px 3px rgba(255,255,255,.10) !important; }
 </style>
 <script>

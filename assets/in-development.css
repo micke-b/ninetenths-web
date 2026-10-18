@@ -24,14 +24,21 @@
 .top nav a[aria-current="page"] { color: var(--blue); }
 
 /* ---- the split ---- */
-.split { display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px; padding: 48px 0 24px; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr); gap: 88px; padding-top: 40px; padding-bottom: 24px; }
 .copy { display: flex; flex-direction: column; gap: 112px; min-width: 0; }
 .rig { min-width: 0; }
 @media (min-width: 1080px) {
-  .split { grid-template-columns: minmax(0, 1fr) minmax(420px, 540px); gap: 72px; padding: 80px 0 40px; }
+  .split { grid-template-columns: minmax(0, 1fr) minmax(420px, 540px); gap: 72px; padding-top: 80px; padding-bottom: 40px; }
   .rig { order: 2; }
   .copy { order: 1; }
   .rig__inner { position: sticky; top: 104px; }
+}
+/* narrow: the headline first, then the gauge and its controls, then the rest */
+@media (max-width: 1079px) {
+  .copy { display: contents; }
+  .hero-dev { order: 1; }
+  .rig { order: 2; }
+  .copy > section:not(.hero-dev) { order: 3; }
 }
 .dev section { display: flex; flex-direction: column; gap: 24px; scroll-margin-top: 96px; }
 .dev h1, .dev h2 { margin: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; color: var(--offwhite); text-wrap: balance; }
@@ -50,6 +57,7 @@
 .stripe { height: 6px; max-width: 560px; background: linear-gradient(90deg, var(--blue) 0 62%, transparent 62% 64%, var(--blue) 64% 70%, transparent 70% 72%, var(--blue) 72% 74%, transparent 74%); }
 .strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); border-top: 1px solid var(--edge); border-left: 1px solid var(--edge); }
 .strip div { display: flex; flex-direction: column; gap: 10px; padding: 18px 16px 16px; border-right: 1px solid var(--edge); border-bottom: 1px solid var(--edge); min-width: 0; }
+@media (max-width: 560px) { .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } .strip div:last-child:nth-child(odd) { grid-column: 1 / -1; } }
 .strip .seg { font-size: 30px; line-height: 1; color: var(--amber); }
 .strip small { font-size: 13.5px; line-height: 1.4; color: var(--steel); }
 
@@ -64,6 +72,7 @@
 .dev button { font-family: var(--display); font-weight: 600; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--offwhite); background: var(--graphite); border: 1px solid var(--edge); padding: 11px 12px; cursor: pointer; text-align: left; border-radius: 0; }
 .dev button:hover { border-color: #3C4046; }
 .dev button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+@media (pointer: coarse) { .dev .chips button, .dev .units button, .dev .warns button { min-height: 44px; } }
 .dev button[aria-pressed="true"] { border-color: var(--blue); background: rgba(53, 168, 255, .12); }
 .units { display: inline-flex; border: 1px solid var(--edge); }
 .units button { border: 0; border-right: 1px solid var(--edge); }
