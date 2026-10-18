@@ -6,10 +6,12 @@ The live gauge on /in-development/ is the mock from the gauge repo
 and driven from the page by postMessage (tools/gauge-embed.html). Fonts and
 the logo are inlined, so the result is one self-contained file.
 
-Run it after the mock changes, then commit in-development/gauge.html:
+Run it after the mock changes, then commit in-development/gauge.html and index.html
+(the page loads the gauge with a hash of it, so browsers fetch every new build):
     python3 tools/build-gauge.py ../gr-yaris-dash
 """
 import base64
+import hashlib
 import pathlib
 import re
 import sys
@@ -43,4 +45,12 @@ if mock.count("</body>") != 1:
 mock = mock.replace("</body>", (site / "tools/gauge-embed.html").read_text() + "\n</body>")
 out = site / "in-development/gauge.html"
 out.write_text(mock)
-print(f"wrote {out.relative_to(site)} ({out.stat().st_size // 1024} KB)")
+# the page loads gauge.html?v=<hash>, so a browser never keeps showing an older build
+page = site / "in-development/index.html"
+html = page.read_text()
+stamp = hashlib.sha1(mock.encode()).hexdigest()[:10]
+html, n = re.subn(r'src="gauge\.html(\?v=[0-9a-f]+)?"', f'src="gauge.html?v={stamp}"', html)
+if n != 1:
+    sys.exit("expected one gauge.html iframe in in-development/index.html")
+page.write_text(html)
+print(f"wrote {out.relative_to(site)} ({out.stat().st_size // 1024} KB), page loads it as ?v={stamp}")

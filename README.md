@@ -4,7 +4,7 @@ Company site for Nine Tenths Engineering AB. Static HTML/CSS, hosted on GitHub P
 
 - `index.html` — the page
 - `in-development/` — products in development: the GR Yaris gauge, with a live demo.
-  `gauge.html` is generated from the gauge repo's browser mock by
+  `gauge.html` (loaded as `gauge.html?v=<hash>`) is generated from the gauge repo's browser mock by
   `tools/build-gauge.py ../gr-yaris-dash` (embed hook: `tools/gauge-embed.html`);
   rerun it when the mock changes. Page styles and script: `assets/in-development.css`, `.js`
 - `assets/styles.css` — styles
